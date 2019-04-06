@@ -62,6 +62,53 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-git最实用命令" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/06/git最实用命令/" class="article-date">
+  <time datetime="2019-04-06T11:39:24.000Z" itemprop="datePublished">2019-04-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/06/git最实用命令/">git最实用命令总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-github第一次上传项目"><a href="#1-github第一次上传项目" class="headerlink" title="1.github第一次上传项目"></a>1.github第一次上传项目</h2><p>进入上传项目的文件夹里，右击选择==Git Bash Here==（如果没有需要下载git工具）依次执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git remote add origin 你的远程仓库地址</span><br><span class="line">git add .	保存本地代码</span><br><span class="line">git commit -m &quot;提交信息&quot;	本地代码提交</span><br><span class="line">git push 或者 git push origin master	本地代码提交到远程仓库</span><br></pre></td></tr></table></figure></p>
+<p>如果提示使用git push origin master，那么很可能是没有设置git账号和密码，输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global credential.helper store</span><br></pre></td></tr></table></figure></p>
+<p>然后下次git就不用重复输入用户名和密码了</p>
+<h2 id="2-以后上传时执行命令"><a href="#2-以后上传时执行命令" class="headerlink" title="2.以后上传时执行命令"></a>2.以后上传时执行命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<h2 id="3-获取远程项目"><a href="#3-获取远程项目" class="headerlink" title="3.获取远程项目"></a>3.获取远程项目</h2><p>如果是多个开发者维护的项目，同事进行了上传了自己的代码到远程项目，而我们为了保持项目一致性，时常需要进行项目更新<br>3-1：如果我们本地没有修改项目，我们可以直接拉取更新的项目：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure></p>
+<p>3-2：很多时候我们都会对本地项目进行一些更改，那么我们需要保存本地项目，然后再更新远程项目：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure></p>
+<h2 id="4-解决冲突"><a href="#4-解决冲突" class="headerlink" title="4.解决冲突"></a>4.解决冲突</h2><p>通常我们不建议使用==git add .==，因为这样会将我们项目所有文件进行提交，我们建议只提交你修改的文件或文件夹，比如提交src文件夹，可以使用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add src</span><br></pre></td></tr></table></figure></p>
+<p>如果和别人都修改了相同的代码，那么很可能会产生冲突，解决冲突的方法有很多，我们这里推荐一种比较简单常用的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git stash 保存</span><br><span class="line">git pull</span><br><span class="line">git stash pop 合并</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure></p>
+<p>我们需要先保存自己代码，然后拉取别人的代码，进行合并，然后再上传（解决完冲突之后最好上传一下，免得别人还碰上冲突）。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zhouhangzooo.github.io/2019/04/06/git最实用命令/" data-id="cju5gu0cy00007kogj7v4b6mf" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-github提交没有贡献解决方案" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/04/05/github提交没有贡献解决方案/" class="article-date">
@@ -92,7 +139,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhouhangzooo.github.io/2019/04/05/github提交没有贡献解决方案/" data-id="cju3h3xk80000nwog599754tb" class="article-share-link">Share</a>
+      <a data-url="http://zhouhangzooo.github.io/2019/04/05/github提交没有贡献解决方案/" data-id="cju5gu0d700017kog466rvjxo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
@@ -128,13 +175,13 @@
       
         <h2 id="1-安装Debugger-for-Chrome插件"><a href="#1-安装Debugger-for-Chrome插件" class="headerlink" title="1.安装Debugger for Chrome插件"></a>1.安装Debugger for Chrome插件</h2><p>找到“扩展”或者按快捷键“Ctrl+Shift+X”，输入Debugger for Chrome查找，并安装。</p>
 <h2 id="2-配置chrome到launch-json中"><a href="#2-配置chrome到launch-json中" class="headerlink" title="2.配置chrome到launch.json中"></a>2.配置chrome到launch.json中</h2><p>然后打开“调试”或者快捷键“Ctrl+Shift+D”，点击配置按钮Open launch.json，弹出选项中选择Chrome，然后会创建并打开launch.json文件，将里面的内容替换成一下内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;version&quot;: &quot;0.2.0&quot;,</span><br><span class="line">    &quot;configurations&quot;: [</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;type&quot;: &quot;chrome&quot;,</span><br><span class="line">        &quot;request&quot;: &quot;launch&quot;,</span><br><span class="line">        &quot;name&quot;: &quot;vuejs: chrome&quot;,</span><br><span class="line">        &quot;url&quot;: &quot;http://localhost:8080&quot;,</span><br><span class="line">        &quot;webRoot&quot;: &quot;$&#123;workspaceFolder&#125;/src&quot;,</span><br><span class="line">        &quot;breakOnLoad&quot;: true,</span><br><span class="line">        &quot;sourceMapPathOverrides&quot;: &#123;</span><br><span class="line">          &quot;webpack:///./src/*&quot;: &quot;$&#123;webRoot&#125;/*&quot;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="3-在终端运行命令npm-run-dev"><a href="#3-在终端运行命令npm-run-dev" class="headerlink" title="3.在终端运行命令npm run dev"></a>3.在终端运行命令npm run dev</h2><p>打开终端，可以在vscode中右击vue项目的根目录，比如src，Open in Terminal（打开终端），然后再输入cd ..，回退到vue项目的根目录，我们的目的是让终端在项目的根目录上，然后就可以运行命令npm run dev，完成之后会自动打开chrome浏览器，这时我们的调试就完成了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\eluzhu\Desktop\项目\test\src&gt; cd ..</span><br><span class="line">PS C:\Users\eluzhu\Desktop\项目\test&gt; npm run dev</span><br></pre></td></tr></table></figure></p>
+<h2 id="3-在终端运行命令npm-run-dev"><a href="#3-在终端运行命令npm-run-dev" class="headerlink" title="3.在终端运行命令npm run dev"></a>3.在终端运行命令npm run dev</h2><p>方法一（推荐）：直接快捷键”Ctrl+`“打开终端，运行命令npm run dev，然后直接F5即可打开chrome浏览器调试；<br>方法二：可以在vscode中右击vue项目的根目录，比如src，Open in Terminal（打开终端），然后再输入cd ..，回退到vue项目的根目录，我们的目的是让终端在项目的根目录上，然后就可以运行命令npm run dev，然后点击调试功能中的绿色箭头开启调试即可打开chrome浏览器调试。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\eluzhu\Desktop\项目\test\src&gt; cd ..</span><br><span class="line">PS C:\Users\eluzhu\Desktop\项目\test&gt; npm run dev</span><br></pre></td></tr></table></figure></p>
 <h2 id="4-断点调试"><a href="#4-断点调试" class="headerlink" title="4.断点调试"></a>4.断点调试</h2><p>直接在你想要查看的代码第几行左侧添加断点，设置成功可以看到比如200行左侧出现红点，至此断点调试就完成了。<br>另外，默认vscode对vue没有代码高亮支持，可以下载Vetur插件。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhouhangzooo.github.io/2019/04/04/vscode调试vue项目/" data-id="cju3h3xkp0006nwogjwd4k9hr" class="article-share-link">Share</a>
+      <a data-url="http://zhouhangzooo.github.io/2019/04/04/vscode调试vue项目/" data-id="cju5gu0df00047kogw8566wbw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vscode/">vscode</a></li></ul>
@@ -178,7 +225,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhouhangzooo.github.io/2019/04/03/vscode插件与webview相互通信/" data-id="cju3h3xkc0001nwogoci391qd" class="article-share-link">Share</a>
+      <a data-url="http://zhouhangzooo.github.io/2019/04/03/vscode插件与webview相互通信/" data-id="cju5gu0dd00037kogz7a9qjcw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vscode/">vscode</a></li></ul>
@@ -213,7 +260,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/vscode/" style="font-size: 20px;">vscode</a>
+      <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a>
     </div>
   </div>
 
@@ -233,6 +280,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/04/06/git最实用命令/">git最实用命令总结</a>
+          </li>
         
           <li>
             <a href="/2019/04/05/github提交没有贡献解决方案/">github提交没有贡献解决方案</a>
