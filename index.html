@@ -62,6 +62,50 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-typeScript定义全局变量供其他ts文件使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/16/typeScript定义全局变量供其他ts文件使用/" class="article-date">
+  <time datetime="2019-04-16T09:23:39.000Z" itemprop="datePublished">2019-04-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/16/typeScript定义全局变量供其他ts文件使用/">typeScript定义全局变量供其他ts文件使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="定义模块"><a href="#定义模块" class="headerlink" title="定义模块"></a>定义模块</h2><p>先在ts中定义一个模块<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export module FileModule &#123;</span><br><span class="line">	export var flag: boolean = false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>在另一个ts文件中引入模块<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#123; FileModule &#125; from &apos;定义ts模块路径&apos;; //格式如下：vs/workbench/parts/files/electron-browser/fileActions</span><br></pre></td></tr></table></figure></p>
+<p>接着就可以使用了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FileModule.flag = true;</span><br></pre></td></tr></table></figure></p>
+<h2 id="全局常用变量可以新建一个ts文件"><a href="#全局常用变量可以新建一个ts文件" class="headerlink" title="全局常用变量可以新建一个ts文件"></a>全局常用变量可以新建一个ts文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">export class MessageText &#123;</span><br><span class="line"></span><br><span class="line">	public static Error_identifier: string = &apos;identifier&apos;;</span><br><span class="line"></span><br><span class="line">	public static Error_isundefined: string = &apos;is undefined&apos;;</span><br><span class="line"></span><br><span class="line">	public static Error_expectedAnExpression: string = &apos;expected an expression&apos;;</span><br><span class="line"></span><br><span class="line">	public static Error_unrecognizedPreprocessingDirective: string = &apos;unrecognized preprocessing directive&apos;;</span><br><span class="line"></span><br><span class="line">	public static Error_expectedAFileName: string = &apos;expected a file name&apos;;</span><br><span class="line"></span><br><span class="line">	public static Error_expectedA: string = &quot;expected a &apos;;&apos;&quot;;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import &#123; MessageText &#125; from &apos;vs/workbench/api/node/messageText&apos;;</span><br><span class="line">MessageText.Error_identifier</span><br></pre></td></tr></table></figure>
+<p>MessageText.Error_identifier 相当于’identifier’</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zhouhangzooo.github.io/2019/04/16/typeScript定义全局变量供其他ts文件使用/" data-id="cjujl5ajh0000goog06qjfwqy" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VsCode/">VsCode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-JavaScript的then-用法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/04/13/JavaScript的then-用法/" class="article-date">
@@ -90,7 +134,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhouhangzooo.github.io/2019/04/13/JavaScript的then-用法/" data-id="cjuew76ur00005sog4ikrvpc5" class="article-share-link">Share</a>
+      <a data-url="http://zhouhangzooo.github.io/2019/04/13/JavaScript的then-用法/" data-id="cjujl5ajr0004googxmxzfx41" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
@@ -134,7 +178,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhouhangzooo.github.io/2019/04/10/vscode插件与源码通信/" data-id="cjuew76vf000a5sog2xd6uq9f" class="article-share-link">Share</a>
+      <a data-url="http://zhouhangzooo.github.io/2019/04/10/vscode插件与源码通信/" data-id="cjujl5akm000fgoogcsqw4k2l" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VsCode/">VsCode</a></li></ul>
@@ -177,7 +221,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhouhangzooo.github.io/2019/04/06/git最实用命令/" data-id="cjuew76uy00035sogd4paondr" class="article-share-link">Share</a>
+      <a data-url="http://zhouhangzooo.github.io/2019/04/06/git最实用命令/" data-id="cjujl5ajm0001googrdif5z7k" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
@@ -219,7 +263,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhouhangzooo.github.io/2019/04/05/github提交没有贡献解决方案/" data-id="cjuew76uv00015sog8a97v01e" class="article-share-link">Share</a>
+      <a data-url="http://zhouhangzooo.github.io/2019/04/05/github提交没有贡献解决方案/" data-id="cjujl5ajq0003googixgm93nd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
@@ -263,7 +307,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhouhangzooo.github.io/2019/04/04/vscode调试vue项目/" data-id="cjuew76vg000c5sogzlyivm6p" class="article-share-link">Share</a>
+      <a data-url="http://zhouhangzooo.github.io/2019/04/04/vscode调试vue项目/" data-id="cjujl5akk000egoog1oj31q6z" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VsCode/">VsCode</a></li></ul>
@@ -307,7 +351,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhouhangzooo.github.io/2019/04/03/vscode插件与webview相互通信/" data-id="cjuew76vd00095sogun0jgxio" class="article-share-link">Share</a>
+      <a data-url="http://zhouhangzooo.github.io/2019/04/03/vscode插件与webview相互通信/" data-id="cjujl5ajt0005goognkmun86r" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VsCode/">VsCode</a></li></ul>
@@ -364,6 +408,10 @@
       <ul>
         
           <li>
+            <a href="/2019/04/16/typeScript定义全局变量供其他ts文件使用/">typeScript定义全局变量供其他ts文件使用</a>
+          </li>
+        
+          <li>
             <a href="/2019/04/13/JavaScript的then-用法/">JavaScript的then()用法</a>
           </li>
         
@@ -377,10 +425,6 @@
         
           <li>
             <a href="/2019/04/05/github提交没有贡献解决方案/">github提交没有贡献解决方案</a>
-          </li>
-        
-          <li>
-            <a href="/2019/04/04/vscode调试vue项目/">vscode调试vue项目</a>
           </li>
         
       </ul>
