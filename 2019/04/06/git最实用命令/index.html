@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="1.github第一次上传项目进入上传项目的文件夹里，右击选择==Git Bash Here==（如果没有需要下载git工具）依次执行：12345git initgit remote add origin 你的远程仓库地址git add .	保存本地代码git commit -m &amp;quot;提交信息&amp;quot;	本地代码提交git push 或者 git push origin master	本">
+<meta name="description" content="github第一次上传项目进入上传项目的文件夹里，右击选择==Git Bash Here==（如果没有需要下载git工具）依次执行：12345git initgit remote add origin 你的远程仓库地址git add .	保存本地代码git commit -m &amp;quot;提交信息&amp;quot;	本地代码提交git push 或者 git push origin master	本地代">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git最实用命令总结">
 <meta property="og:url" content="http://zhouhangzooo.github.io/2019/04/06/git最实用命令/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="1.github第一次上传项目进入上传项目的文件夹里，右击选择==Git Bash Here==（如果没有需要下载git工具）依次执行：12345git initgit remote add origin 你的远程仓库地址git add .	保存本地代码git commit -m &amp;quot;提交信息&amp;quot;	本地代码提交git push 或者 git push origin master	本">
+<meta property="og:description" content="github第一次上传项目进入上传项目的文件夹里，右击选择==Git Bash Here==（如果没有需要下载git工具）依次执行：12345git initgit remote add origin 你的远程仓库地址git add .	保存本地代码git commit -m &amp;quot;提交信息&amp;quot;	本地代码提交git push 或者 git push origin master	本地代">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-12T08:47:32.933Z">
+<meta property="og:updated_time" content="2019-04-19T06:11:03.126Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git最实用命令总结">
-<meta name="twitter:description" content="1.github第一次上传项目进入上传项目的文件夹里，右击选择==Git Bash Here==（如果没有需要下载git工具）依次执行：12345git initgit remote add origin 你的远程仓库地址git add .	保存本地代码git commit -m &amp;quot;提交信息&amp;quot;	本地代码提交git push 或者 git push origin master	本">
+<meta name="twitter:description" content="github第一次上传项目进入上传项目的文件夹里，右击选择==Git Bash Here==（如果没有需要下载git工具）依次执行：12345git initgit remote add origin 你的远程仓库地址git add .	保存本地代码git commit -m &amp;quot;提交信息&amp;quot;	本地代码提交git push 或者 git push origin master	本地代">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -74,7 +74,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: 
+        search: true
     }
 </script>
 
@@ -88,6 +88,16 @@
 
 
 
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?345a50867ad7ebff2e39ea8ffdf24a16";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 
 
 </head></html>
@@ -108,6 +118,13 @@
         <p class="header-subtitle">机智如我！</p>
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false">
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class="no-result">No results found <i class="fa fa-spinner fa-pulse"></i></p>
         
 
 
@@ -196,9 +213,7 @@
                     
                       <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
                     
-                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/zhouhangzooo">GitHub</a>
                     
                     </div>
                 </section>
@@ -208,7 +223,7 @@
                 
                 <section class="switch-part switch-part4">
                 
-                    <div id="js-aboutme">专注于前端</div>
+                    <div id="js-aboutme">专注于编程</div>
                 </section>
                 
             </div>
@@ -302,14 +317,14 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="1-github第一次上传项目"><a href="#1-github第一次上传项目" class="headerlink" title="1.github第一次上传项目"></a>1.github第一次上传项目</h2><p>进入上传项目的文件夹里，右击选择==Git Bash Here==（如果没有需要下载git工具）依次执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git remote add origin 你的远程仓库地址</span><br><span class="line">git add .	保存本地代码</span><br><span class="line">git commit -m &quot;提交信息&quot;	本地代码提交</span><br><span class="line">git push 或者 git push origin master	本地代码提交到远程仓库</span><br></pre></td></tr></table></figure></p>
+        <h2 id="github第一次上传项目"><a href="#github第一次上传项目" class="headerlink" title="github第一次上传项目"></a>github第一次上传项目</h2><p>进入上传项目的文件夹里，右击选择==Git Bash Here==（如果没有需要下载git工具）依次执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git remote add origin 你的远程仓库地址</span><br><span class="line">git add .	保存本地代码</span><br><span class="line">git commit -m &quot;提交信息&quot;	本地代码提交</span><br><span class="line">git push 或者 git push origin master	本地代码提交到远程仓库</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <p>如果提示使用git push origin master，那么很可能是没有设置git账号和密码，输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global credential.helper store</span><br></pre></td></tr></table></figure></p>
 <p>然后下次git就不用重复输入用户名和密码了</p>
-<h2 id="2-以后上传时执行命令"><a href="#2-以后上传时执行命令" class="headerlink" title="2.以后上传时执行命令"></a>2.以后上传时执行命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-<h2 id="3-获取远程项目"><a href="#3-获取远程项目" class="headerlink" title="3.获取远程项目"></a>3.获取远程项目</h2><p>如果是多个开发者维护的项目，同事进行了上传了自己的代码到远程项目，而我们为了保持项目一致性，时常需要进行项目更新<br>3-1：如果我们本地没有修改项目，我们可以直接拉取更新的项目：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure></p>
+<h2 id="以后上传时执行命令"><a href="#以后上传时执行命令" class="headerlink" title="以后上传时执行命令"></a>以后上传时执行命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<h2 id="获取远程项目"><a href="#获取远程项目" class="headerlink" title="获取远程项目"></a>获取远程项目</h2><p>如果是多个开发者维护的项目，同事进行了上传了自己的代码到远程项目，而我们为了保持项目一致性，时常需要进行项目更新<br>3-1：如果我们本地没有修改项目，我们可以直接拉取更新的项目：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure></p>
 <p>3-2：很多时候我们都会对本地项目进行一些更改，那么我们需要保存本地项目，然后再更新远程项目：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure></p>
-<h2 id="4-解决冲突"><a href="#4-解决冲突" class="headerlink" title="4.解决冲突"></a>4.解决冲突</h2><p>通常我们不建议使用==git add .==，因为这样会将我们项目所有文件进行提交，我们建议只提交你修改的文件或文件夹，比如提交src文件夹，可以使用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add src</span><br></pre></td></tr></table></figure></p>
+<h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p>通常我们不建议使用==git add .==，因为这样会将我们项目所有文件进行提交，我们建议只提交你修改的文件或文件夹，比如提交src文件夹，可以使用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add src</span><br></pre></td></tr></table></figure></p>
 <p>如果和别人都修改了相同的代码，那么很可能会产生冲突，解决冲突的方法有很多，我们这里推荐一种比较简单常用的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git stash 保存</span><br><span class="line">git pull</span><br><span class="line">git stash pop 合并</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure></p>
 <p>我们需要先保存自己代码，然后拉取别人的代码，进行合并，然后再上传（解决完冲突之后最好上传一下，免得别人还碰上冲突）。</p>
 
@@ -323,7 +338,7 @@
         <p><span>本文标题:</span><a href="/2019/04/06/git最实用命令/">git最实用命令总结</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Zhou Hang</a></p>
         <p><span>发布时间:</span>2019-04-06, 19:39:24</p>
-        <p><span>最后更新:</span>2019-04-12, 16:47:32</p>
+        <p><span>最后更新:</span>2019-04-19, 14:11:03</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/04/06/git最实用命令/" title="git最实用命令总结">http://zhouhangzooo.github.io/2019/04/06/git最实用命令/</a>
             <span class="copy-path" data-clipboard-text="原文: http://zhouhangzooo.github.io/2019/04/06/git最实用命令/　　作者: Zhou Hang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -359,7 +374,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-github第一次上传项目"><span class="toc-number">1.</span> <span class="toc-text">1.github第一次上传项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-以后上传时执行命令"><span class="toc-number">2.</span> <span class="toc-text">2.以后上传时执行命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-获取远程项目"><span class="toc-number">3.</span> <span class="toc-text">3.获取远程项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-解决冲突"><span class="toc-number">4.</span> <span class="toc-text">4.解决冲突</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#github第一次上传项目"><span class="toc-number">1.</span> <span class="toc-text">github第一次上传项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#以后上传时执行命令"><span class="toc-number">2.</span> <span class="toc-text">以后上传时执行命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取远程项目"><span class="toc-number">3.</span> <span class="toc-text">获取远程项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决冲突"><span class="toc-number">4.</span> <span class="toc-text">解决冲突</span></a></li></ol>
         
     </div>
     <style>
@@ -483,7 +498,7 @@
                 $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
             }
             else {
-                var backgroundnum = 5;
+                var backgroundnum = 2;
                 var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
                 $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
             }

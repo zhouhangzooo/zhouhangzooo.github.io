@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="1.安装Debugger for Chrome插件找到“扩展”或者按快捷键“Ctrl+Shift+X”，输入Debugger for Chrome查找，并安装。 2.配置chrome到launch.json中然后打开“调试”或者快捷键“Ctrl+Shift+D”，点击配置按钮Open launch.json，弹出选项中选择Chrome，然后会创建并打开launch.json文件，将里面的内容替换成">
+<meta name="description" content="安装Debugger for Chrome插件找到“扩展”或者按快捷键“Ctrl+Shift+X”，输入Debugger for Chrome查找，并安装。 配置chrome到launch.json中然后打开“调试”或者快捷键“Ctrl+Shift+D”，点击配置按钮Open launch.json，弹出选项中选择Chrome，然后会创建并打开launch.json文件，将里面的内容替换成一下内容">
 <meta name="keywords" content="VsCode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vscode调试vue项目">
 <meta property="og:url" content="http://zhouhangzooo.github.io/2019/04/04/vscode调试vue项目/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="1.安装Debugger for Chrome插件找到“扩展”或者按快捷键“Ctrl+Shift+X”，输入Debugger for Chrome查找，并安装。 2.配置chrome到launch.json中然后打开“调试”或者快捷键“Ctrl+Shift+D”，点击配置按钮Open launch.json，弹出选项中选择Chrome，然后会创建并打开launch.json文件，将里面的内容替换成">
+<meta property="og:description" content="安装Debugger for Chrome插件找到“扩展”或者按快捷键“Ctrl+Shift+X”，输入Debugger for Chrome查找，并安装。 配置chrome到launch.json中然后打开“调试”或者快捷键“Ctrl+Shift+D”，点击配置按钮Open launch.json，弹出选项中选择Chrome，然后会创建并打开launch.json文件，将里面的内容替换成一下内容">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-12T09:16:08.908Z">
+<meta property="og:updated_time" content="2019-04-19T06:12:21.755Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vscode调试vue项目">
-<meta name="twitter:description" content="1.安装Debugger for Chrome插件找到“扩展”或者按快捷键“Ctrl+Shift+X”，输入Debugger for Chrome查找，并安装。 2.配置chrome到launch.json中然后打开“调试”或者快捷键“Ctrl+Shift+D”，点击配置按钮Open launch.json，弹出选项中选择Chrome，然后会创建并打开launch.json文件，将里面的内容替换成">
+<meta name="twitter:description" content="安装Debugger for Chrome插件找到“扩展”或者按快捷键“Ctrl+Shift+X”，输入Debugger for Chrome查找，并安装。 配置chrome到launch.json中然后打开“调试”或者快捷键“Ctrl+Shift+D”，点击配置按钮Open launch.json，弹出选项中选择Chrome，然后会创建并打开launch.json文件，将里面的内容替换成一下内容">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -74,7 +74,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: 
+        search: true
     }
 </script>
 
@@ -88,6 +88,16 @@
 
 
 
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?345a50867ad7ebff2e39ea8ffdf24a16";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 
 
 </head></html>
@@ -108,6 +118,13 @@
         <p class="header-subtitle">机智如我！</p>
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false">
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class="no-result">No results found <i class="fa fa-spinner fa-pulse"></i></p>
         
 
 
@@ -196,9 +213,7 @@
                     
                       <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
                     
-                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/zhouhangzooo">GitHub</a>
                     
                     </div>
                 </section>
@@ -208,7 +223,7 @@
                 
                 <section class="switch-part switch-part4">
                 
-                    <div id="js-aboutme">专注于前端</div>
+                    <div id="js-aboutme">专注于编程</div>
                 </section>
                 
             </div>
@@ -302,10 +317,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="1-安装Debugger-for-Chrome插件"><a href="#1-安装Debugger-for-Chrome插件" class="headerlink" title="1.安装Debugger for Chrome插件"></a>1.安装Debugger for Chrome插件</h2><p>找到“扩展”或者按快捷键“Ctrl+Shift+X”，输入Debugger for Chrome查找，并安装。</p>
-<h2 id="2-配置chrome到launch-json中"><a href="#2-配置chrome到launch-json中" class="headerlink" title="2.配置chrome到launch.json中"></a>2.配置chrome到launch.json中</h2><p>然后打开“调试”或者快捷键“Ctrl+Shift+D”，点击配置按钮Open launch.json，弹出选项中选择Chrome，然后会创建并打开launch.json文件，将里面的内容替换成一下内容，默认内容是下面的内容<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;version&quot;: &quot;0.2.0&quot;,</span><br><span class="line">    &quot;configurations&quot;: [</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;type&quot;: &quot;chrome&quot;,</span><br><span class="line">        &quot;request&quot;: &quot;launch&quot;,</span><br><span class="line">        &quot;name&quot;: &quot;vuejs: chrome&quot;,</span><br><span class="line">        &quot;url&quot;: &quot;http://localhost:8080&quot;,</span><br><span class="line">        &quot;webRoot&quot;: &quot;$&#123;workspaceFolder&#125;/src&quot;,</span><br><span class="line">        &quot;breakOnLoad&quot;: true,</span><br><span class="line">        &quot;sourceMapPathOverrides&quot;: &#123;</span><br><span class="line">          &quot;webpack:///./src/*&quot;: &quot;$&#123;webRoot&#125;/*&quot;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="3-在终端运行命令npm-run-dev"><a href="#3-在终端运行命令npm-run-dev" class="headerlink" title="3.在终端运行命令npm run dev"></a>3.在终端运行命令npm run dev</h2><p>方法一（推荐）：直接快捷键”Ctrl+`“打开终端，运行命令npm run dev，然后直接F5即可打开chrome浏览器调试；<br>方法二：可以在vscode中右击vue项目的根目录，比如src，Open in Terminal（打开终端），然后再输入cd ..，回退到vue项目的根目录，我们的目的是让终端在项目的根目录上，然后就可以运行命令npm run dev，然后点击调试功能中的绿色箭头开启调试即可打开chrome浏览器调试。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\eluzhu\Desktop\项目\test\src&gt; cd ..</span><br><span class="line">PS C:\Users\eluzhu\Desktop\项目\test&gt; npm run dev</span><br></pre></td></tr></table></figure></p>
-<h2 id="4-断点调试"><a href="#4-断点调试" class="headerlink" title="4.断点调试"></a>4.断点调试</h2><p>直接在你想要查看的代码第几行左侧添加断点，设置成功可以看到比如200行左侧出现红点，至此断点调试就完成了。<br>另外，默认vscode对vue没有代码高亮支持，可以下载Vetur插件。</p>
+        <h2 id="安装Debugger-for-Chrome插件"><a href="#安装Debugger-for-Chrome插件" class="headerlink" title="安装Debugger for Chrome插件"></a>安装Debugger for Chrome插件</h2><p>找到“扩展”或者按快捷键“Ctrl+Shift+X”，输入Debugger for Chrome查找，并安装。</p>
+<h2 id="配置chrome到launch-json中"><a href="#配置chrome到launch-json中" class="headerlink" title="配置chrome到launch.json中"></a>配置chrome到launch.json中</h2><p>然后打开“调试”或者快捷键“Ctrl+Shift+D”，点击配置按钮Open launch.json，弹出选项中选择Chrome，然后会创建并打开launch.json文件，将里面的内容替换成一下内容，默认内容是下面的内容<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;version&quot;: &quot;0.2.0&quot;,</span><br><span class="line">    &quot;configurations&quot;: [</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;type&quot;: &quot;chrome&quot;,</span><br><span class="line">        &quot;request&quot;: &quot;launch&quot;,</span><br><span class="line">        &quot;name&quot;: &quot;vuejs: chrome&quot;,</span><br><span class="line">        &quot;url&quot;: &quot;http://localhost:8080&quot;,</span><br><span class="line">        &quot;webRoot&quot;: &quot;$&#123;workspaceFolder&#125;/src&quot;,</span><br><span class="line">        &quot;breakOnLoad&quot;: true,</span><br><span class="line">        &quot;sourceMapPathOverrides&quot;: &#123;</span><br><span class="line">          &quot;webpack:///./src/*&quot;: &quot;$&#123;webRoot&#125;/*&quot;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="在终端运行命令npm-run-dev"><a href="#在终端运行命令npm-run-dev" class="headerlink" title="在终端运行命令npm run dev"></a>在终端运行命令npm run dev</h2><p>方法一（推荐）：直接快捷键”Ctrl+`“打开终端，运行命令npm run dev，然后直接F5即可打开chrome浏览器调试；<br>方法二：可以在vscode中右击vue项目的根目录，比如src，Open in Terminal（打开终端），然后再输入cd ..，回退到vue项目的根目录，我们的目的是让终端在项目的根目录上，然后就可以运行命令npm run dev，然后点击调试功能中的绿色箭头开启调试即可打开chrome浏览器调试。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\eluzhu\Desktop\项目\test\src&gt; cd ..</span><br><span class="line">PS C:\Users\eluzhu\Desktop\项目\test&gt; npm run dev</span><br></pre></td></tr></table></figure></p>
+<h2 id="断点调试"><a href="#断点调试" class="headerlink" title="断点调试"></a>断点调试</h2><p>直接在你想要查看的代码第几行左侧添加断点，设置成功可以看到比如200行左侧出现红点，至此断点调试就完成了。<br>另外，默认vscode对vue没有代码高亮支持，可以下载Vetur插件。</p>
 
       
     </div>
@@ -317,7 +332,7 @@
         <p><span>本文标题:</span><a href="/2019/04/04/vscode调试vue项目/">vscode调试vue项目</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Zhou Hang</a></p>
         <p><span>发布时间:</span>2019-04-04, 15:32:59</p>
-        <p><span>最后更新:</span>2019-04-12, 17:16:08</p>
+        <p><span>最后更新:</span>2019-04-19, 14:12:21</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/04/04/vscode调试vue项目/" title="vscode调试vue项目">http://zhouhangzooo.github.io/2019/04/04/vscode调试vue项目/</a>
             <span class="copy-path" data-clipboard-text="原文: http://zhouhangzooo.github.io/2019/04/04/vscode调试vue项目/　　作者: Zhou Hang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -353,7 +368,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-安装Debugger-for-Chrome插件"><span class="toc-number">1.</span> <span class="toc-text">1.安装Debugger for Chrome插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-配置chrome到launch-json中"><span class="toc-number">2.</span> <span class="toc-text">2.配置chrome到launch.json中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-在终端运行命令npm-run-dev"><span class="toc-number">3.</span> <span class="toc-text">3.在终端运行命令npm run dev</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-断点调试"><span class="toc-number">4.</span> <span class="toc-text">4.断点调试</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Debugger-for-Chrome插件"><span class="toc-number">1.</span> <span class="toc-text">安装Debugger for Chrome插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置chrome到launch-json中"><span class="toc-number">2.</span> <span class="toc-text">配置chrome到launch.json中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在终端运行命令npm-run-dev"><span class="toc-number">3.</span> <span class="toc-text">在终端运行命令npm run dev</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#断点调试"><span class="toc-number">4.</span> <span class="toc-text">断点调试</span></a></li></ol>
         
     </div>
     <style>
@@ -477,7 +492,7 @@
                 $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
             }
             else {
-                var backgroundnum = 5;
+                var backgroundnum = 2;
                 var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
                 $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
             }
