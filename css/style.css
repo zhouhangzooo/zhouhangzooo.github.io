@@ -886,107 +886,107 @@ a {
   -moz-background-size: 75%;
   background-size: 75%;
 }
-.CodePen {
+#header .header-nav .social .CodePen {
   background: url("//cdn.bootcss.com/logos/0.2.0/codepen-icon.svg") no-repeat #000;
   -webkit-background-size: 70%;
   -moz-background-size: 70%;
   background-size: 70%;
   background-position: 50% 50%;
 }
-.RSS {
+#header .header-nav .social .RSS {
   background: #ef7522;
 }
-.RSS::before {
+#header .header-nav .social .RSS::before {
   content: '\f09e';
 }
-.Google {
+#header .header-nav .social .Google {
   background: #c83d20;
 }
-.Google::before {
+#header .header-nav .social .Google::before {
   content: '\f1a0';
 }
-.Twitter {
+#header .header-nav .social .Twitter {
   background: #55cff8;
 }
-.Twitter::before {
+#header .header-nav .social .Twitter::before {
   content: '\f099';
 }
-.LinkedIn {
+#header .header-nav .social .LinkedIn {
   background: #005a87;
 }
-.LinkedIn::before {
+#header .header-nav .social .LinkedIn::before {
   content: '\f0e1';
 }
-.Email {
+#header .header-nav .social .Email {
   background: #6fc0e4;
 }
-.Email::before {
+#header .header-nav .social .Email::before {
   content: '\f003';
 }
-.Facebook {
+#header .header-nav .social .Facebook {
   background: #3b5998;
 }
-.Facebook::before {
+#header .header-nav .social .Facebook::before {
   content: '\f09a';
 }
-.QQ {
+#header .header-nav .social .QQ {
   background: #1cbcef;
 }
-.QQ::before {
+#header .header-nav .social .QQ::before {
   content: '\f1d6';
 }
-.微信 {
+#header .header-nav .social .微信 {
   background: #8cdc49;
 }
-.微信::before {
+#header .header-nav .social .微信::before {
   content: '\f1d7';
 }
-.PayPal {
+#header .header-nav .social .PayPal {
   background: #03a4e4;
 }
-.PayPal::before {
+#header .header-nav .social .PayPal::before {
   content: '\f1ed';
 }
-.StackOverflow {
+#header .header-nav .social .StackOverflow {
   background: #f48024;
 }
-.StackOverflow::before {
+#header .header-nav .social .StackOverflow::before {
   content: '\f16c';
 }
-.Instagram {
+#header .header-nav .social .Instagram {
   background: #bab0a6;
 }
-.Instagram::before {
+#header .header-nav .social .Instagram::before {
   content: '\f16d';
 }
-.Flickr {
+#header .header-nav .social .Flickr {
   background: #0365c8;
 }
-.Flickr::before {
+#header .header-nav .social .Flickr::before {
   content: '\f16e';
 }
-.reddit {
+#header .header-nav .social .reddit {
   background: #0278d1;
 }
-.reddit::before {
+#header .header-nav .social .reddit::before {
   content: '\f281';
 }
-.Medium {
+#header .header-nav .social .Medium {
   background: #00ab6b;
 }
-.Medium::before {
+#header .header-nav .social .Medium::before {
   content: '\f23a';
 }
-.Tumblr {
+#header .header-nav .social .Tumblr {
   background: #3a5976;
 }
-.Tumblr::before {
+#header .header-nav .social .Tumblr::before {
   content: '\f173';
 }
-._500px {
+#header .header-nav .social ._500px {
   background: #0099e5;
 }
-._500px::before {
+#header .header-nav .social ._500px::before {
   content: '\f26e';
 }
 .duoshuo {
