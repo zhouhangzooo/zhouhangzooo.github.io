@@ -880,8 +880,8 @@ a {
   -moz-background-size: 103%;
   background-size: 103%;
 }
-#header .header-nav .social .Github {
-  background: url("/img/Github.png") center no-repeat #fff;
+#header .header-nav .social .GitHub {
+  background: url("/img/GitHub.png") center no-repeat #fff;
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
   background-size: 100%;
