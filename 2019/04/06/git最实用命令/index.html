@@ -498,7 +498,7 @@
                 $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
             }
             else {
-                var backgroundnum = 2;
+                var backgroundnum = 1;
                 var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
                 $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
             }
@@ -524,8 +524,8 @@
             
             
             
-             archives: ".archive-article-title", 
-             miniArchives: "a.post-list-link", 
+            
+            
             
              friends: "#js-friends a", 
              socail: ".social a" 
@@ -541,7 +541,7 @@
         var titleTime;
         document.addEventListener("visibilitychange", function() {
             if (document.hidden) {
-                document.title = " 我藏好了哦~ " + originTitle;
+                document.title = " 我在这里呀~ " + originTitle;
                 clearTimeout(titleTime);
             }
             else {
