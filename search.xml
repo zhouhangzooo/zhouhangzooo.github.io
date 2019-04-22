@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>hexo显示github图标解决方法</title>
+      <link href="/2019/04/20/hexo%E6%98%BE%E7%A4%BAgithub%E5%9B%BE%E6%A0%87%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+      <url>/2019/04/20/hexo%E6%98%BE%E7%A4%BAgithub%E5%9B%BE%E6%A0%87%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<p>本人使用的是yelee主题<br>我这里总结一下：</p><h2 id="操作一"><a href="#操作一" class="headerlink" title="操作一"></a>操作一</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">首先下载一个github图标，放在/yelee/source/img/目录下，命名为GitHub.png，注意是GitHub，而不是Github和github；</span><br><span class="line">接下来删除在/yelee/source/css/_partial/customise/social-icon.styl的46-50行，然后在img-logo = 添加GitHub white 100。</span><br></pre></td></tr></table></figure><a id="more"></a><p>GitHub white 100 的意思是github添加白色背景且透明度为100，背景可以自行选择<br>hexo clean 清理缓存<br><a href="https://XXX/img/GitHub.png" target="_blank" rel="noopener">https://XXX/img/GitHub.png</a> XXX填入你的仓库地址</p><p>注意：如果按我的方法一步步走，最终会出现github图片，如果hexo s预览出现图片但线上不显示，那么可能你一开始命名的图片名字不同，我由于一开始命名不同，我命名了Github.png了，因此我在通过F12查看，说找不到图片，<a href="https://zhouhangzooo.github.io/img/GitHub.png。">https://zhouhangzooo.github.io/img/GitHub.png。</a><br>这个地址返回的是404，我想可能是我一开始命名的问题了，我试着输入<a href="https://zhouhangzooo.github.io/img/Github.png，">https://zhouhangzooo.github.io/img/Github.png，</a><br>结果果然图片出现了，这个问题和命名标签问题是一样的，对于已经命名好的标签，我们不能去修改，至于为什么我也不知道，但如果修改了，标签下的文章就找不到了，这个不知是不是hexo的机制问题，只认定了初次创建的标签，就算你修改了它指引的地址也不会改变，所以我们尽量不要改标签、标题名字和文件夹名字等。<br>如果和我一样命名出现了错误，可以参考我的解决方法是：先将img目录下的github图片和GitHub white 100 删除，然后执行 hexo clean &amp;&amp; hexo g 命令，再执行 hexo d ，接下来重新执行操作一。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java中的-&gt;用法</title>
       <link href="/2019/04/17/Java%E4%B8%AD%E7%9A%84-%E7%94%A8%E6%B3%95/"/>
       <url>/2019/04/17/Java%E4%B8%AD%E7%9A%84-%E7%94%A8%E6%B3%95/</url>
