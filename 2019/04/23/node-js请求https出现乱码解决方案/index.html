@@ -15,18 +15,17 @@
 
 
 
-<meta name="description" content="定义模块先在ts中定义一个模块123export module FileModule &amp;#123;	export var flag: boolean = false;&amp;#125; 使用在另一个ts文件中引入模块1import &amp;#123; FileModule &amp;#125; from &amp;apos;定义ts模块路径&amp;apos;; //格式如下：vs/workbench/parts/files/ele">
-<meta name="keywords" content="VsCode">
+<meta name="description" content="使用node.js请求https，代码如下：123456789101112131415161718192021222324252627282930313233343536373839404142var options = &amp;#123;			hostname: &amp;quot;www.baidu.com&amp;quot;,			port: 443,			path: &amp;quot;/bfi-web/api/stu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="typeScript定义全局变量供其他ts文件使用">
-<meta property="og:url" content="http://zhouhangzooo.github.io/2019/04/16/typeScript定义全局变量供其他ts文件使用/index.html">
+<meta property="og:title" content="node.js请求https出现乱码解决方案">
+<meta property="og:url" content="http://zhouhangzooo.github.io/2019/04/23/node-js请求https出现乱码解决方案/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="定义模块先在ts中定义一个模块123export module FileModule &amp;#123;	export var flag: boolean = false;&amp;#125; 使用在另一个ts文件中引入模块1import &amp;#123; FileModule &amp;#125; from &amp;apos;定义ts模块路径&amp;apos;; //格式如下：vs/workbench/parts/files/ele">
+<meta property="og:description" content="使用node.js请求https，代码如下：123456789101112131415161718192021222324252627282930313233343536373839404142var options = &amp;#123;			hostname: &amp;quot;www.baidu.com&amp;quot;,			port: 443,			path: &amp;quot;/bfi-web/api/stu">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-16T09:31:28.060Z">
+<meta property="og:updated_time" content="2019-04-23T03:50:16.239Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="typeScript定义全局变量供其他ts文件使用">
-<meta name="twitter:description" content="定义模块先在ts中定义一个模块123export module FileModule &amp;#123;	export var flag: boolean = false;&amp;#125; 使用在另一个ts文件中引入模块1import &amp;#123; FileModule &amp;#125; from &amp;apos;定义ts模块路径&amp;apos;; //格式如下：vs/workbench/parts/files/ele">
+<meta name="twitter:title" content="node.js请求https出现乱码解决方案">
+<meta name="twitter:description" content="使用node.js请求https，代码如下：123456789101112131415161718192021222324252627282930313233343536373839404142var options = &amp;#123;			hostname: &amp;quot;www.baidu.com&amp;quot;,			port: 443,			path: &amp;quot;/bfi-web/api/stu">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -58,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>typeScript定义全局变量供其他ts文件使用 | Blog</title>
+<title>node.js请求https出现乱码解决方案 | Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -277,11 +276,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-typeScript定义全局变量供其他ts文件使用" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-node-js请求https出现乱码解决方案" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/04/16/typeScript定义全局变量供其他ts文件使用/" class="article-date">
-      <time datetime="2019-04-16T09:23:39.000Z" itemprop="datePublished">2019-04-16</time>
+      <a href="/2019/04/23/node-js请求https出现乱码解决方案/" class="article-date">
+      <time datetime="2019-04-23T03:13:52.000Z" itemprop="datePublished">2019-04-23</time>
 </a>
 
 
@@ -296,7 +295,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      typeScript定义全局变量供其他ts文件使用
+      node.js请求https出现乱码解决方案
     </h1>
   
 
@@ -306,10 +305,6 @@
         
 
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VsCode/">VsCode</a></li></ul>
-    </div>
-
         <div class="clearfix"></div>
       </div>
       
@@ -317,13 +312,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="定义模块"><a href="#定义模块" class="headerlink" title="定义模块"></a>定义模块</h2><p>先在ts中定义一个模块<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export module FileModule &#123;</span><br><span class="line">	export var flag: boolean = false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>在另一个ts文件中引入模块<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#123; FileModule &#125; from &apos;定义ts模块路径&apos;; //格式如下：vs/workbench/parts/files/electron-browser/fileActions</span><br></pre></td></tr></table></figure></p>
-<p>接着就可以使用了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FileModule.flag = true;</span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<h2 id="全局常用变量可以新建一个ts文件"><a href="#全局常用变量可以新建一个ts文件" class="headerlink" title="全局常用变量可以新建一个ts文件"></a>全局常用变量可以新建一个ts文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">export class MessageText &#123;</span><br><span class="line"></span><br><span class="line">	public static Error_identifier: string = &apos;identifier&apos;;</span><br><span class="line"></span><br><span class="line">	public static Error_isundefined: string = &apos;is undefined&apos;;</span><br><span class="line"></span><br><span class="line">	public static Error_expectedAnExpression: string = &apos;expected an expression&apos;;</span><br><span class="line"></span><br><span class="line">	public static Error_unrecognizedPreprocessingDirective: string = &apos;unrecognized preprocessing directive&apos;;</span><br><span class="line"></span><br><span class="line">	public static Error_expectedAFileName: string = &apos;expected a file name&apos;;</span><br><span class="line"></span><br><span class="line">	public static Error_expectedA: string = &quot;expected a &apos;;&apos;&quot;;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import &#123; MessageText &#125; from &apos;vs/workbench/api/node/messageText&apos;;</span><br><span class="line">MessageText.Error_identifier</span><br></pre></td></tr></table></figure>
-<p>MessageText.Error_identifier 相当于’identifier’</p>
+        <h4 id="使用node-js请求https，代码如下："><a href="#使用node-js请求https，代码如下：" class="headerlink" title="使用node.js请求https，代码如下："></a>使用node.js请求https，代码如下：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">var options = &#123;</span><br><span class="line">			hostname: &quot;www.baidu.com&quot;,</span><br><span class="line">			port: 443,</span><br><span class="line">			path: &quot;/bfi-web/api/student/course/list_new&quot;,</span><br><span class="line">			method: &quot;POST&quot;,</span><br><span class="line">			rejectUnauthorized: false,</span><br><span class="line">			headers: &#123;</span><br><span class="line">				Accept: &quot;*/*&quot;,</span><br><span class="line">				// 添加这些都没有用</span><br><span class="line">				// &apos;Accept-Encoding&apos;: &apos;gzip, deflate&apos;,</span><br><span class="line">				// &quot;Accept-Encoding&quot;: &quot;utf-8&quot;,</span><br><span class="line">				// &quot;Accept-Language&quot;: &quot;zh-CN,zh;q=0.8&quot;,</span><br><span class="line">				// &apos;Content-Type&apos;:  &apos;text/html;  charset=utf-8&apos;,</span><br><span class="line">				// Connection: &quot;keep-alive&quot;,</span><br><span class="line">				Host: &quot;www.eluzhu.com&quot;,</span><br><span class="line">                //后台定义的header</span><br><span class="line">				token: &quot;&quot;,</span><br><span class="line">				version: &quot;1&quot;,</span><br><span class="line">				from: &quot;IDE&quot;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;;</span><br><span class="line">		var mData = &apos;&apos;;</span><br><span class="line">		var req = https.request(options, function(res) &#123;</span><br><span class="line">			console.log(`HEADERS: $&#123;JSON.stringify(res.headers)&#125;`);</span><br><span class="line">			res.setEncoding(&apos;utf-8&apos;);</span><br><span class="line">			res.on(&quot;data&quot;, function(d) &#123;</span><br><span class="line">				console.log(&apos;===================================data===========&apos; + d);</span><br><span class="line">				mData += d;</span><br><span class="line">			&#125;);</span><br><span class="line">			res.on(&quot;end&quot;, function() &#123;</span><br><span class="line">				var data = JSON.parse(mData);</span><br><span class="line">				if (data.code == &quot;000000&quot;) &#123;</span><br><span class="line">					//成功处理</span><br><span class="line">				&#125; else &#123;</span><br><span class="line">					vscode.window.showInformationMessage(&quot;请求失败：&quot; + data.msg);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;);</span><br><span class="line">		req.end();</span><br><span class="line">		req.on(&quot;error&quot;, function(e) &#123;</span><br><span class="line">			console.error(&quot;====================================================&quot; + e);</span><br><span class="line">		&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">通过控制台查看console.log(`HEADERS: $&#123;JSON.stringify(res.headers)&#125;`)结果，查看里面是&quot;content-type&quot;:&quot;application/json;charset=utf-8&quot;，可以看到后台定义的格式是utf-8，这里返回什么格式我们就需要用什么格式去解码。</span><br></pre></td></tr></table></figure>
+<h4 id="res-setEncoding-‘utf-8’"><a href="#res-setEncoding-‘utf-8’" class="headerlink" title="res.setEncoding(‘utf-8’);"></a>res.setEncoding(‘utf-8’);</h4><p>在网上看到好几种解决乱码的方法都没有效，这次碰到问题记录一下，方便以后别人的需要。</p>
 
       
     </div>
@@ -332,13 +323,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/04/16/typeScript定义全局变量供其他ts文件使用/">typeScript定义全局变量供其他ts文件使用</a></p>
+        <p><span>本文标题:</span><a href="/2019/04/23/node-js请求https出现乱码解决方案/">node.js请求https出现乱码解决方案</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Zhou Hang</a></p>
-        <p><span>发布时间:</span>2019-04-16, 17:23:39</p>
-        <p><span>最后更新:</span>2019-04-16, 17:31:28</p>
+        <p><span>发布时间:</span>2019-04-23, 11:13:52</p>
+        <p><span>最后更新:</span>2019-04-23, 11:50:16</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/04/16/typeScript定义全局变量供其他ts文件使用/" title="typeScript定义全局变量供其他ts文件使用">http://zhouhangzooo.github.io/2019/04/16/typeScript定义全局变量供其他ts文件使用/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://zhouhangzooo.github.io/2019/04/16/typeScript定义全局变量供其他ts文件使用/　　作者: Zhou Hang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/04/23/node-js请求https出现乱码解决方案/" title="node.js请求https出现乱码解决方案">http://zhouhangzooo.github.io/2019/04/23/node-js请求https出现乱码解决方案/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://zhouhangzooo.github.io/2019/04/23/node-js请求https出现乱码解决方案/　　作者: Zhou Hang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -350,16 +341,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/04/17/Java中的-用法/">
-                    Java中的-&gt;用法
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/04/13/JavaScript的then-用法/">
-                    JavaScript的then()用法
+                <a href="/2019/04/20/hexo显示github图标解决方法/">
+                    hexo显示github图标解决方法
                 </a>
             </div>
         
@@ -371,7 +356,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#定义模块"><span class="toc-number">1.</span> <span class="toc-text">定义模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用"><span class="toc-number">2.</span> <span class="toc-text">使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全局常用变量可以新建一个ts文件"><span class="toc-number">3.</span> <span class="toc-text">全局常用变量可以新建一个ts文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用-1"><span class="toc-number">4.</span> <span class="toc-text">使用</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#使用node-js请求https，代码如下："><span class="toc-number">1.</span> <span class="toc-text">使用node.js请求https，代码如下：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#res-setEncoding-‘utf-8’"><span class="toc-number">2.</span> <span class="toc-text">res.setEncoding(‘utf-8’);</span></a></li></ol>
         
     </div>
     <style>
@@ -407,7 +392,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"typeScript定义全局变量供其他ts文件使用　| Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"node.js请求https出现乱码解决方案　| Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -427,15 +412,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/04/17/Java中的-用法/" title="上一篇: Java中的-&gt;用法">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/04/13/JavaScript的then-用法/" title="下一篇: JavaScript的then()用法">
+            <a href="/2019/04/20/hexo显示github图标解决方法/" title="下一篇: hexo显示github图标解决方法">
                 <i class="fa fa-angle-right"></i>
             </a>
         
