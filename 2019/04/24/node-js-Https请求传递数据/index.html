@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="昨天做项目碰到一个问题：要执行A方法，方法里面有写入文件的耗时操作，然后我想等A方法执行完了再执行B方法，因此我们可以用js特有的then()方法，那么它可以帮我们完成这个问题。封装A方法为函数，A方法：vscode.commands.executeCommand(‘workbench.action.files.newUntitledFile’)123const p = function()&amp;#1">
-<meta name="keywords" content="JavaScript">
+<meta name="description" content="我的代码如下：参考了网上大多说的是req.write(contents);我试了这样写没有效果而是在url拼接?contents 来传递数据1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950import * as https from &amp;quot;https&amp;quot">
+<meta name="keywords" content="https,node.js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript的then()用法">
-<meta property="og:url" content="http://zhouhangzooo.github.io/2019/04/13/JavaScript的then-用法/index.html">
+<meta property="og:title" content="node.js Https请求传递数据">
+<meta property="og:url" content="http://zhouhangzooo.github.io/2019/04/24/node-js-Https请求传递数据/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="昨天做项目碰到一个问题：要执行A方法，方法里面有写入文件的耗时操作，然后我想等A方法执行完了再执行B方法，因此我们可以用js特有的then()方法，那么它可以帮我们完成这个问题。封装A方法为函数，A方法：vscode.commands.executeCommand(‘workbench.action.files.newUntitledFile’)123const p = function()&amp;#1">
+<meta property="og:description" content="我的代码如下：参考了网上大多说的是req.write(contents);我试了这样写没有效果而是在url拼接?contents 来传递数据1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950import * as https from &amp;quot;https&amp;quot">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-13T02:39:46.921Z">
+<meta property="og:updated_time" content="2019-04-24T08:08:50.435Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript的then()用法">
-<meta name="twitter:description" content="昨天做项目碰到一个问题：要执行A方法，方法里面有写入文件的耗时操作，然后我想等A方法执行完了再执行B方法，因此我们可以用js特有的then()方法，那么它可以帮我们完成这个问题。封装A方法为函数，A方法：vscode.commands.executeCommand(‘workbench.action.files.newUntitledFile’)123const p = function()&amp;#1">
+<meta name="twitter:title" content="node.js Https请求传递数据">
+<meta name="twitter:description" content="我的代码如下：参考了网上大多说的是req.write(contents);我试了这样写没有效果而是在url拼接?contents 来传递数据1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950import * as https from &amp;quot;https&amp;quot">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -58,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>JavaScript的then()用法 | Blog</title>
+<title>node.js Https请求传递数据 | Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -277,11 +277,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-JavaScript的then-用法" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-node-js-Https请求传递数据" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/04/13/JavaScript的then-用法/" class="article-date">
-      <time datetime="2019-04-13T02:21:31.000Z" itemprop="datePublished">2019-04-13</time>
+      <a href="/2019/04/24/node-js-Https请求传递数据/" class="article-date">
+      <time datetime="2019-04-24T07:23:00.000Z" itemprop="datePublished">2019-04-24</time>
 </a>
 
 
@@ -296,7 +296,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      JavaScript的then()用法
+      node.js Https请求传递数据
     </h1>
   
 
@@ -307,7 +307,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/https/">https</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/">node.js</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -317,8 +317,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>昨天做项目碰到一个问题：要执行A方法，方法里面有写入文件的耗时操作，然后我想等A方法执行完了再执行B方法，因此我们可以用js特有的then()方法，那么它可以帮我们完成这个问题。<br>封装A方法为函数，A方法：vscode.commands.executeCommand(‘workbench.action.files.newUntitledFile’)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const p = function()&#123;</span><br><span class="line">	return vscode.commands.executeCommand(&apos;workbench.action.files.newUntitledFile&apos;)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>再执行B方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p().then(val =&gt; &#123;</span><br><span class="line">	vscode.commands.executeCommand(&quot;extension.demo.openWebview&quot;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+        <h4 id="我的代码如下："><a href="#我的代码如下：" class="headerlink" title="我的代码如下："></a>我的代码如下：</h4><h4 id="参考了网上大多说的是req-write-contents-我试了这样写没有效果"><a href="#参考了网上大多说的是req-write-contents-我试了这样写没有效果" class="headerlink" title="参考了网上大多说的是req.write(contents);我试了这样写没有效果"></a>参考了网上大多说的是req.write(contents);我试了这样写没有效果</h4><h4 id="而是在url拼接-contents-来传递数据"><a href="#而是在url拼接-contents-来传递数据" class="headerlink" title="而是在url拼接?contents 来传递数据"></a>而是在url拼接?contents 来传递数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">import * as https from &quot;https&quot;;</span><br><span class="line">var querystring = require(&apos;querystring&apos;);</span><br><span class="line"></span><br><span class="line">//传递到后台的数据</span><br><span class="line">var data = &quot;1&quot;;</span><br><span class="line">var post_data = &#123; classId: data &#125;;</span><br><span class="line">var contents = querystring.stringify(post_data);</span><br><span class="line"></span><br><span class="line">var options = &#123;</span><br><span class="line">    hostname: &quot;www.baidu.com&quot;,</span><br><span class="line">    port: 443,</span><br><span class="line">    path: &quot;/bfi-web/api/student/course/list_new?&quot; + contents,</span><br><span class="line">    method: &quot;POST&quot;,</span><br><span class="line">    rejectUnauthorized: false,</span><br><span class="line">    headers: &#123;</span><br><span class="line">        Accept: &quot;*/*&quot;,</span><br><span class="line">        &quot;Accept-Encoding&quot;: &quot;utf-8&quot;,</span><br><span class="line">        &quot;Accept-Language&quot;: &quot;zh-CN,zh;q=0.8&quot;,</span><br><span class="line">        Connection: &quot;keep-alive&quot;,</span><br><span class="line">        Host: &quot;www.eluzhu.com&quot;,</span><br><span class="line">        token: token,</span><br><span class="line">        version: &quot;2.6&quot;,</span><br><span class="line">        from: &quot;IDE&quot;,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var mData = &apos;&apos;;</span><br><span class="line">var req = https.request(options, function (res) &#123;</span><br><span class="line">    res.setEncoding(&apos;utf-8&apos;);</span><br><span class="line">    res.on(&quot;data&quot;, function (d) &#123;</span><br><span class="line">        console.log(&apos;===================================data===========&apos; + d);</span><br><span class="line">        mData += d;</span><br><span class="line">    &#125;);</span><br><span class="line">    res.on(&quot;end&quot;, function () &#123;</span><br><span class="line">        var data = JSON.parse(mData);</span><br><span class="line">        // console.log(&apos;===================================data===========&apos; + mData);</span><br><span class="line">        if (data.code == &quot;000000&quot;) &#123;</span><br><span class="line">            MyTreeProvider.datas = data.data.list;</span><br><span class="line">            MyTreeProvider.initMyTreeList();</span><br><span class="line">        &#125;</span><br><span class="line">        else &#123;</span><br><span class="line">            vscode.window.showInformationMessage(&quot;请求失败：&quot; + data.msg);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">// req.write(contents);</span><br><span class="line">req.on(&quot;error&quot;, function (e) &#123;</span><br><span class="line">    console.error(&quot;====================================================&quot; + e);</span><br><span class="line">&#125;);</span><br><span class="line">req.end();</span><br></pre></td></tr></table></figure>
+<p>本文参考来自：<a href="https://www.imooc.com/qadetail/181878" target="_blank" rel="noopener">https://www.imooc.com/qadetail/181878</a></p>
 
       
     </div>
@@ -327,13 +327,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/04/13/JavaScript的then-用法/">JavaScript的then()用法</a></p>
+        <p><span>本文标题:</span><a href="/2019/04/24/node-js-Https请求传递数据/">node.js Https请求传递数据</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Zhou Hang</a></p>
-        <p><span>发布时间:</span>2019-04-13, 10:21:31</p>
-        <p><span>最后更新:</span>2019-04-13, 10:39:46</p>
+        <p><span>发布时间:</span>2019-04-24, 15:23:00</p>
+        <p><span>最后更新:</span>2019-04-24, 16:08:50</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/04/13/JavaScript的then-用法/" title="JavaScript的then()用法">http://zhouhangzooo.github.io/2019/04/13/JavaScript的then-用法/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://zhouhangzooo.github.io/2019/04/13/JavaScript的then-用法/　　作者: Zhou Hang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/04/24/node-js-Https请求传递数据/" title="node.js Https请求传递数据">http://zhouhangzooo.github.io/2019/04/24/node-js-Https请求传递数据/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://zhouhangzooo.github.io/2019/04/24/node-js-Https请求传递数据/　　作者: Zhou Hang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -345,16 +345,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/04/16/typeScript定义全局变量供其他ts文件使用/">
-                    typeScript定义全局变量供其他ts文件使用
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/04/10/vscode插件与源码通信/">
-                    vscode插件调用源码功能
+                <a href="/2019/04/23/node-js请求https出现乱码解决方案/">
+                    node.js请求https出现乱码解决方案
                 </a>
             </div>
         
@@ -366,7 +360,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#我的代码如下："><span class="toc-number">1.</span> <span class="toc-text">我的代码如下：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#参考了网上大多说的是req-write-contents-我试了这样写没有效果"><span class="toc-number">2.</span> <span class="toc-text">参考了网上大多说的是req.write(contents);我试了这样写没有效果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#而是在url拼接-contents-来传递数据"><span class="toc-number">3.</span> <span class="toc-text">而是在url拼接?contents 来传递数据</span></a></li></ol>
         
     </div>
     <style>
@@ -402,7 +396,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"JavaScript的then()用法　| Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"node.js Https请求传递数据　| Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -422,15 +416,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/04/16/typeScript定义全局变量供其他ts文件使用/" title="上一篇: typeScript定义全局变量供其他ts文件使用">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/04/10/vscode插件与源码通信/" title="下一篇: vscode插件调用源码功能">
+            <a href="/2019/04/23/node-js请求https出现乱码解决方案/" title="下一篇: node.js请求https出现乱码解决方案">
                 <i class="fa fa-angle-right"></i>
             </a>
         
