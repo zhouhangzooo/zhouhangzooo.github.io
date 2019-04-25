@@ -547,6 +547,10 @@ a {
   #container .tags a {
     line-height: 45px;
   }
+  #container #comments {
+    margin: 0.625rem 10px !important;
+    padding: 1rem !important;
+  }
 }
 .header-author {
   text-align: center;
