@@ -15,13 +15,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Blog">
-<meta property="og:url" content="http://zhouhangzooo.github.io/tags/JavaScript/index.html">
+<meta name="description" content="记录如何部署jsp项目到远程虚拟机或者服务器上 准备工具：Xshell6、Xftp6、VMware Workstation 准备工作：需要在VMware Workstation中建立你的虚拟机（相当于服务器），并且开启虚拟机；Xshell中建立会话（配置主机和用户名密码） 上传jsp项目：Xftp6 新建会话，配置主机ip，这和Xshell配置差不多，点击连接，传输到tomcat的同级目录下，进入">
+<meta name="keywords" content="jsp,服务器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="部署jsp项目到虚拟机服务器上">
+<meta property="og:url" content="http://zhouhangzooo.github.io/2019/04/30/部署jsp到虚拟机服务器上/index.html">
 <meta property="og:site_name" content="Blog">
+<meta property="og:description" content="记录如何部署jsp项目到远程虚拟机或者服务器上 准备工具：Xshell6、Xftp6、VMware Workstation 准备工作：需要在VMware Workstation中建立你的虚拟机（相当于服务器），并且开启虚拟机；Xshell中建立会话（配置主机和用户名密码） 上传jsp项目：Xftp6 新建会话，配置主机ip，这和Xshell配置差不多，点击连接，传输到tomcat的同级目录下，进入">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-30T14:34:04.395Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog">
+<meta name="twitter:title" content="部署jsp项目到虚拟机服务器上">
+<meta name="twitter:description" content="记录如何部署jsp项目到远程虚拟机或者服务器上 准备工具：Xshell6、Xftp6、VMware Workstation 准备工作：需要在VMware Workstation中建立你的虚拟机（相当于服务器），并且开启虚拟机；Xshell中建立会话（配置主机和用户名密码） 上传jsp项目：Xftp6 新建会话，配置主机ip，这和Xshell配置差不多，点击连接，传输到tomcat的同级目录下，进入">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -51,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Tag: JavaScript | Blog</title>
+<title>部署jsp项目到虚拟机服务器上 | Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -61,9 +66,9 @@
         fancybox: true,
         animate: false,
         isHome: false,
-        isPost: false,
+        isPost: true,
         isArchive: false,
-        isTag: true,
+        isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
@@ -266,56 +271,185 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-部署jsp到虚拟机服务器上" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2019/04/13/JavaScript的then-用法/" class="archive-article-date">
-      <time datetime="2019-04-13T02:21:31.000Z" itemprop="datePublished">04-13</time>
+    <div class="article-meta">
+      <a href="/2019/04/30/部署jsp到虚拟机服务器上/" class="article-date">
+      <time datetime="2019-04-30T13:59:14.000Z" itemprop="datePublished">2019-04-30</time>
 </a>
 
 
-        </div>
-         
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/13/JavaScript的then-用法/">JavaScript的then()用法</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      部署jsp项目到虚拟机服务器上
     </h1>
   
 
-        <div class="article-info info-on-archive">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 
-          
+        
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jsp/">jsp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
     </div>
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>记录如何部署jsp项目到远程虚拟机或者服务器上</p>
+<h4 id="准备工具："><a href="#准备工具：" class="headerlink" title="准备工具："></a>准备工具：</h4><p>Xshell6、Xftp6、VMware Workstation</p>
+<h4 id="准备工作："><a href="#准备工作：" class="headerlink" title="准备工作："></a>准备工作：</h4><p>需要在VMware Workstation中建立你的虚拟机（相当于服务器），并且开启虚拟机；<br>Xshell中建立会话（配置主机和用户名密码）</p>
+<h4 id="上传jsp项目："><a href="#上传jsp项目：" class="headerlink" title="上传jsp项目："></a>上传jsp项目：</h4><p>Xftp6 新建会话，配置主机ip，这和Xshell配置差不多，点击连接，传输到tomcat的同级目录下，<br>进入tomcat的同级目录下，解压jsp项目，ls查看是否存在pom，然后执行mvn install，<br>会在target下生成war包，然后mv命令移动war包到tomcat的webapps下，<br>通过主机ip加8080加项目名称即可访问。<br>这是静态web项目部署方式，动态web直接将项目放在tomcat的webapp下即可。</p>
+<h4 id="常用命令："><a href="#常用命令：" class="headerlink" title="常用命令："></a>常用命令：</h4><p>主机ip查看：ifconfig<br>开启tomcat服务：./bin/startup.sh    在bin上一级目录<br>关闭服务：./bin/shutdown.sh<br>解压zip：unzip jsp.zip<br>wget 下载<br>tar -xzvf 解压tar</p>
+
+      
+    </div>
+    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2019/04/30/部署jsp到虚拟机服务器上/">部署jsp项目到虚拟机服务器上</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Zhou Hang</a></p>
+        <p><span>发布时间:</span>2019-04-30, 21:59:14</p>
+        <p><span>最后更新:</span>2019-04-30, 22:34:04</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2019/04/30/部署jsp到虚拟机服务器上/" title="部署jsp项目到虚拟机服务器上">http://zhouhangzooo.github.io/2019/04/30/部署jsp到虚拟机服务器上/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://zhouhangzooo.github.io/2019/04/30/部署jsp到虚拟机服务器上/　　作者: Zhou Hang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2019/04/24/node-js-Https请求传递数据/">
+                    node.js Https请求传递数据
+                </a>
+            </div>
+        
+    </nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#准备工具："><span class="toc-number">1.</span> <span class="toc-text">准备工具：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#准备工作："><span class="toc-number">2.</span> <span class="toc-text">准备工作：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#上传jsp项目："><span class="toc-number">3.</span> <span class="toc-text">上传jsp项目：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#常用命令："><span class="toc-number">4.</span> <span class="toc-text">常用命令：</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
 
     
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"部署jsp项目到虚拟机服务器上　| Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
 
+    
+</div>
+
+
+
+
+
+
+
+    
+      <section id="comments" style="margin: 2em; padding: 2em; background: rgba(255, 255, 255, 0.5)">
+    <div id="vcomment" class="comment"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@1.2.0-beta1/dist/Valine.min.js"></script>
+    <script>
+      new Valine({
+        el: '#vcomment',
+        notify: 'false',
+        verify: 'false',
+        app_id: "JjHKC8NX2HmTM8f5UNiX4eVl-gzGzoHsz",
+        app_key: "G3WHXS8xhiUdLpLRJ3ckM4JJ",
+        placeholder: "欢迎来评论!",
+        avatar: "mp"
+      });
+    </script>
+</section>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2019/04/24/node-js-Https请求传递数据/" title="下一篇: node.js Https请求传递数据">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/04/30/部署jsp到虚拟机服务器上/">部署jsp项目到虚拟机服务器上</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/24/node-js-Https请求传递数据/">node.js Https请求传递数据</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/23/node-js请求https出现乱码解决方案/">node.js请求https出现乱码解决方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/20/hexo显示github图标解决方法/">hexo显示github图标解决方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/17/Java中的-用法/">Java中的->用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/16/typeScript定义全局变量供其他ts文件使用/">typeScript定义全局变量供其他ts文件使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/13/JavaScript的then-用法/">JavaScript的then()用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/10/vscode插件与源码通信/">vscode插件调用源码功能</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/06/git最实用命令/">git最实用命令总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/05/github提交没有贡献解决方案/">github提交没有贡献解决方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/04/vscode调试vue项目/">vscode调试vue项目</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/03/vscode插件与webview相互通信/">vscode插件与webview相互通信</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">

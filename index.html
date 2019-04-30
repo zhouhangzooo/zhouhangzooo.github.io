@@ -196,7 +196,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VsCode/">VsCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VsCode/">VsCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jsp/">jsp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
                     </div>
                 </section>
                 
@@ -270,6 +270,70 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-部署jsp到虚拟机服务器上" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/04/30/部署jsp到虚拟机服务器上/" class="article-date">
+      <time datetime="2019-04-30T13:59:14.000Z" itemprop="datePublished">2019-04-30</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/30/部署jsp到虚拟机服务器上/">部署jsp项目到虚拟机服务器上</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>记录如何部署jsp项目到远程虚拟机或者服务器上</p>
+<h4 id="准备工具："><a href="#准备工具：" class="headerlink" title="准备工具："></a>准备工具：</h4><p>Xshell6、Xftp6、VMware Workstation</p>
+<h4 id="准备工作："><a href="#准备工作：" class="headerlink" title="准备工作："></a>准备工作：</h4><p>需要在VMware Workstation中建立你的虚拟机（相当于服务器），并且开启虚拟机；<br>Xshell中建立会话（配置主机和用户名密码）</p>
+<h4 id="上传jsp项目："><a href="#上传jsp项目：" class="headerlink" title="上传jsp项目："></a>上传jsp项目：</h4><p>Xftp6 新建会话，配置主机ip，这和Xshell配置差不多，点击连接，传输到tomcat的同级目录下，<br>进入tomcat的同级目录下，解压jsp项目，ls查看是否存在pom，然后执行mvn install，<br>会在target下生成war包，然后mv命令移动war包到tomcat的webapps下，<br>通过主机ip加8080加项目名称即可访问。<br>这是静态web项目部署方式，动态web直接将项目放在tomcat的webapp下即可。</p>
+<h4 id="常用命令："><a href="#常用命令：" class="headerlink" title="常用命令："></a>常用命令：</h4><p>主机ip查看：ifconfig<br>开启tomcat服务：./bin/startup.sh    在bin上一级目录<br>关闭服务：./bin/shutdown.sh<br>解压zip：unzip jsp.zip<br>wget 下载<br>tar -xzvf 解压tar</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jsp/">jsp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-node-js-Https请求传递数据" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -830,71 +894,6 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
     </div>
 
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-vscode调试vue项目" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/04/04/vscode调试vue项目/" class="article-date">
-      <time datetime="2019-04-04T07:32:59.000Z" itemprop="datePublished">2019-04-04</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/04/vscode调试vue项目/">vscode调试vue项目</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h2 id="安装Debugger-for-Chrome插件"><a href="#安装Debugger-for-Chrome插件" class="headerlink" title="安装Debugger for Chrome插件"></a>安装Debugger for Chrome插件</h2><p>找到“扩展”或者按快捷键“Ctrl+Shift+X”，输入Debugger for Chrome查找，并安装。</p>
-<h2 id="配置chrome到launch-json中"><a href="#配置chrome到launch-json中" class="headerlink" title="配置chrome到launch.json中"></a>配置chrome到launch.json中</h2><p>然后打开“调试”或者快捷键“Ctrl+Shift+D”，点击配置按钮Open launch.json，弹出选项中选择Chrome，然后会创建并打开launch.json文件，将里面的内容替换成一下内容，默认内容是下面的内容<br>
-          
-      
-    </p></div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VsCode/">VsCode</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2019/04/04/vscode调试vue项目/#more">阅读全文 >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>
