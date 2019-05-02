@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="定义模块先在ts中定义一个模块123export module FileModule &amp;#123;	export var flag: boolean = false;&amp;#125; 使用在另一个ts文件中引入模块1import &amp;#123; FileModule &amp;#125; from &amp;apos;定义ts模块路径&amp;apos;; //格式如下：vs/workbench/parts/files/ele">
-<meta name="keywords" content="VsCode">
+<meta name="description" content="本文记录简单使用JDBC的教程 准备工具：eclipse、mysql mysql建数据库和数据表1234567891011121314//创建数据库ZHOUHANGcreate database ZHOUHANG;//使用数据库use ZHOUHANG;//创建数据表create table `zhou`(`id` int unsigned auto_increment,	`name` varch">
+<meta name="keywords" content="Java,JDBC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="typeScript定义全局变量供其他ts文件使用">
-<meta property="og:url" content="http://zhouhangzooo.github.io/2019/04/16/typeScript定义全局变量供其他ts文件使用/index.html">
+<meta property="og:title" content="JDBC基础使用">
+<meta property="og:url" content="http://zhouhangzooo.github.io/2019/05/02/JDBC基础使用/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="定义模块先在ts中定义一个模块123export module FileModule &amp;#123;	export var flag: boolean = false;&amp;#125; 使用在另一个ts文件中引入模块1import &amp;#123; FileModule &amp;#125; from &amp;apos;定义ts模块路径&amp;apos;; //格式如下：vs/workbench/parts/files/ele">
+<meta property="og:description" content="本文记录简单使用JDBC的教程 准备工具：eclipse、mysql mysql建数据库和数据表1234567891011121314//创建数据库ZHOUHANGcreate database ZHOUHANG;//使用数据库use ZHOUHANG;//创建数据表create table `zhou`(`id` int unsigned auto_increment,	`name` varch">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-16T09:31:28.060Z">
+<meta property="og:updated_time" content="2019-05-02T13:03:00.115Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="typeScript定义全局变量供其他ts文件使用">
-<meta name="twitter:description" content="定义模块先在ts中定义一个模块123export module FileModule &amp;#123;	export var flag: boolean = false;&amp;#125; 使用在另一个ts文件中引入模块1import &amp;#123; FileModule &amp;#125; from &amp;apos;定义ts模块路径&amp;apos;; //格式如下：vs/workbench/parts/files/ele">
+<meta name="twitter:title" content="JDBC基础使用">
+<meta name="twitter:description" content="本文记录简单使用JDBC的教程 准备工具：eclipse、mysql mysql建数据库和数据表1234567891011121314//创建数据库ZHOUHANGcreate database ZHOUHANG;//使用数据库use ZHOUHANG;//创建数据表create table `zhou`(`id` int unsigned auto_increment,	`name` varch">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>typeScript定义全局变量供其他ts文件使用 | Blog</title>
+<title>JDBC基础使用 | Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -271,11 +271,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-typeScript定义全局变量供其他ts文件使用" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-JDBC基础使用" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/04/16/typeScript定义全局变量供其他ts文件使用/" class="article-date">
-      <time datetime="2019-04-16T09:23:39.000Z" itemprop="datePublished">2019-04-16</time>
+      <a href="/2019/05/02/JDBC基础使用/" class="article-date">
+      <time datetime="2019-05-02T12:09:21.000Z" itemprop="datePublished">2019-05-02</time>
 </a>
 
 
@@ -290,7 +290,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      typeScript定义全局变量供其他ts文件使用
+      JDBC基础使用
     </h1>
   
 
@@ -301,7 +301,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VsCode/">VsCode</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JDBC/">JDBC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -311,14 +311,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="定义模块"><a href="#定义模块" class="headerlink" title="定义模块"></a>定义模块</h2><p>先在ts中定义一个模块<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export module FileModule &#123;</span><br><span class="line">	export var flag: boolean = false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>在另一个ts文件中引入模块<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#123; FileModule &#125; from &apos;定义ts模块路径&apos;; //格式如下：vs/workbench/parts/files/electron-browser/fileActions</span><br></pre></td></tr></table></figure></p>
-<p>接着就可以使用了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FileModule.flag = true;</span><br></pre></td></tr></table></figure></p>
+        <p>本文记录简单使用JDBC的教程</p>
+<h2 id="准备工具："><a href="#准备工具：" class="headerlink" title="准备工具："></a>准备工具：</h2><p>eclipse、mysql</p>
+<h2 id="mysql建数据库和数据表"><a href="#mysql建数据库和数据表" class="headerlink" title="mysql建数据库和数据表"></a>mysql建数据库和数据表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//创建数据库ZHOUHANG</span><br><span class="line">create database ZHOUHANG;</span><br><span class="line"></span><br><span class="line">//使用数据库</span><br><span class="line">use ZHOUHANG;</span><br><span class="line"></span><br><span class="line">//创建数据表</span><br><span class="line">create table `zhou`(`id` int unsigned auto_increment,</span><br><span class="line">	`name` varchar(100) not null,</span><br><span class="line">    primary key (`id`)</span><br><span class="line">    )engine=innodb default charset=utf8;</span><br><span class="line"></span><br><span class="line">//插入几条数据</span><br><span class="line">insert into zhou values (0,&quot;java&quot;),(0,&quot;android&quot;),(0,&quot;小程序&quot;);</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h2 id="全局常用变量可以新建一个ts文件"><a href="#全局常用变量可以新建一个ts文件" class="headerlink" title="全局常用变量可以新建一个ts文件"></a>全局常用变量可以新建一个ts文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">export class MessageText &#123;</span><br><span class="line"></span><br><span class="line">	public static Error_identifier: string = &apos;identifier&apos;;</span><br><span class="line"></span><br><span class="line">	public static Error_isundefined: string = &apos;is undefined&apos;;</span><br><span class="line"></span><br><span class="line">	public static Error_expectedAnExpression: string = &apos;expected an expression&apos;;</span><br><span class="line"></span><br><span class="line">	public static Error_unrecognizedPreprocessingDirective: string = &apos;unrecognized preprocessing directive&apos;;</span><br><span class="line"></span><br><span class="line">	public static Error_expectedAFileName: string = &apos;expected a file name&apos;;</span><br><span class="line"></span><br><span class="line">	public static Error_expectedA: string = &quot;expected a &apos;;&apos;&quot;;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import &#123; MessageText &#125; from &apos;vs/workbench/api/node/messageText&apos;;</span><br><span class="line">MessageText.Error_identifier</span><br></pre></td></tr></table></figure>
-<p>MessageText.Error_identifier 相当于’identifier’</p>
-
+<h2 id="java调用JDBC代码如下："><a href="#java调用JDBC代码如下：" class="headerlink" title="java调用JDBC代码如下："></a>java调用JDBC代码如下：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">import java.sql.Connection;</span><br><span class="line">import java.sql.DriverManager;</span><br><span class="line">import java.sql.ResultSet;</span><br><span class="line">import java.sql.Statement;</span><br><span class="line"></span><br><span class="line">public class DbUtil &#123;</span><br><span class="line"></span><br><span class="line">	public static final String URL = &quot;jdbc:mysql://localhost:3306/ZHOUHANG?serverTimezone=UTC&quot;;</span><br><span class="line">    public static final String USER = &quot;root&quot;;</span><br><span class="line">    public static final String PASSWORD = &quot;123456&quot;; //改为你本地数据库的密码</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) throws Exception &#123;</span><br><span class="line">        //1.加载驱动程序</span><br><span class="line">        Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;); //如果你的数据库版本小于8.0.15，那么改成com.mysql.jdbc.Driver</span><br><span class="line">        //2. 获得数据库连接</span><br><span class="line">        Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);</span><br><span class="line">        //3.操作数据库，实现增删改查</span><br><span class="line">        Statement stmt = conn.createStatement();</span><br><span class="line">        ResultSet rs = stmt.executeQuery(&quot;SELECT id, name FROM zhou&quot;);</span><br><span class="line">        //如果有数据，rs.next()返回true</span><br><span class="line">        while(rs.next())&#123;</span><br><span class="line">            System.out.println(rs.getString(&quot;name&quot;)+&quot; ID：&quot;+rs.getInt(&quot;id&quot;));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="导包"><a href="#导包" class="headerlink" title="导包"></a>导包</h2><p>因为不是maven项目所以需要手动导包，所以需要在项目lib中加入mysql-connector-java-8.0.15.jar，然后build path中的add即可；<br>不然会报错：找不到”com.mysql.cj.jdbc.Driver”这个类。</p>
+<h2 id="最终输出结果："><a href="#最终输出结果：" class="headerlink" title="最终输出结果："></a>最终输出结果：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java ID：1</span><br><span class="line">android ID：2</span><br><span class="line">小程序 ID：3</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -326,13 +325,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/04/16/typeScript定义全局变量供其他ts文件使用/">typeScript定义全局变量供其他ts文件使用</a></p>
+        <p><span>本文标题:</span><a href="/2019/05/02/JDBC基础使用/">JDBC基础使用</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Zhou Hang</a></p>
-        <p><span>发布时间:</span>2019-04-16, 17:23:39</p>
-        <p><span>最后更新:</span>2019-04-16, 17:31:28</p>
+        <p><span>发布时间:</span>2019-05-02, 20:09:21</p>
+        <p><span>最后更新:</span>2019-05-02, 21:03:00</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/04/16/typeScript定义全局变量供其他ts文件使用/" title="typeScript定义全局变量供其他ts文件使用">http://zhouhangzooo.github.io/2019/04/16/typeScript定义全局变量供其他ts文件使用/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://zhouhangzooo.github.io/2019/04/16/typeScript定义全局变量供其他ts文件使用/　　作者: Zhou Hang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/05/02/JDBC基础使用/" title="JDBC基础使用">http://zhouhangzooo.github.io/2019/05/02/JDBC基础使用/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://zhouhangzooo.github.io/2019/05/02/JDBC基础使用/　　作者: Zhou Hang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -344,16 +343,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/04/17/Java中的-用法/">
-                    Java中的-&gt;用法
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/04/13/JavaScript的then-用法/">
-                    JavaScript的then()用法
+                <a href="/2019/04/30/部署jsp到虚拟机服务器上/">
+                    部署jsp项目到虚拟机服务器上
                 </a>
             </div>
         
@@ -365,7 +358,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#定义模块"><span class="toc-number">1.</span> <span class="toc-text">定义模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用"><span class="toc-number">2.</span> <span class="toc-text">使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全局常用变量可以新建一个ts文件"><span class="toc-number">3.</span> <span class="toc-text">全局常用变量可以新建一个ts文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用-1"><span class="toc-number">4.</span> <span class="toc-text">使用</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备工具："><span class="toc-number">1.</span> <span class="toc-text">准备工具：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mysql建数据库和数据表"><span class="toc-number">2.</span> <span class="toc-text">mysql建数据库和数据表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java调用JDBC代码如下："><span class="toc-number">3.</span> <span class="toc-text">java调用JDBC代码如下：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#导包"><span class="toc-number">4.</span> <span class="toc-text">导包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最终输出结果："><span class="toc-number">5.</span> <span class="toc-text">最终输出结果：</span></a></li></ol>
         
     </div>
     <style>
@@ -401,7 +394,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"typeScript定义全局变量供其他ts文件使用　| Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"JDBC基础使用　| Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -438,15 +431,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/04/17/Java中的-用法/" title="上一篇: Java中的-&gt;用法">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/04/13/JavaScript的then-用法/" title="下一篇: JavaScript的then()用法">
+            <a href="/2019/04/30/部署jsp到虚拟机服务器上/" title="下一篇: 部署jsp项目到虚拟机服务器上">
                 <i class="fa fa-angle-right"></i>
             </a>
         

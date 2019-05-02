@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="记录如何部署jsp项目到远程虚拟机或者服务器上 准备工具：Xshell6、Xftp6、VMware Workstation 准备工作：需要在VMware Workstation中建立你的虚拟机（相当于服务器），并且开启虚拟机；Xshell中建立会话（配置主机和用户名密码） 上传jsp项目：Xftp6 新建会话，配置主机ip，这和Xshell配置差不多，点击连接，传输到tomcat的同级目录下，进入">
+<meta name="description" content="记录如何部署jsp项目到远程虚拟机或者服务器上 准备工具：Xshell6、Xftp6、VMware Workstation 准备工作：需要在VMware Workstation中建立你的虚拟机（相当于服务器），并且开启虚拟机；Xshell中建立会话（配置主机和用户名密码） 上传jsp项目：">
 <meta name="keywords" content="jsp,服务器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="部署jsp项目到虚拟机服务器上">
 <meta property="og:url" content="http://zhouhangzooo.github.io/2019/04/30/部署jsp到虚拟机服务器上/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="记录如何部署jsp项目到远程虚拟机或者服务器上 准备工具：Xshell6、Xftp6、VMware Workstation 准备工作：需要在VMware Workstation中建立你的虚拟机（相当于服务器），并且开启虚拟机；Xshell中建立会话（配置主机和用户名密码） 上传jsp项目：Xftp6 新建会话，配置主机ip，这和Xshell配置差不多，点击连接，传输到tomcat的同级目录下，进入">
+<meta property="og:description" content="记录如何部署jsp项目到远程虚拟机或者服务器上 准备工具：Xshell6、Xftp6、VMware Workstation 准备工作：需要在VMware Workstation中建立你的虚拟机（相当于服务器），并且开启虚拟机；Xshell中建立会话（配置主机和用户名密码） 上传jsp项目：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-30T14:34:04.395Z">
+<meta property="og:updated_time" content="2019-05-02T10:03:23.963Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="部署jsp项目到虚拟机服务器上">
-<meta name="twitter:description" content="记录如何部署jsp项目到远程虚拟机或者服务器上 准备工具：Xshell6、Xftp6、VMware Workstation 准备工作：需要在VMware Workstation中建立你的虚拟机（相当于服务器），并且开启虚拟机；Xshell中建立会话（配置主机和用户名密码） 上传jsp项目：Xftp6 新建会话，配置主机ip，这和Xshell配置差不多，点击连接，传输到tomcat的同级目录下，进入">
+<meta name="twitter:description" content="记录如何部署jsp项目到远程虚拟机或者服务器上 准备工具：Xshell6、Xftp6、VMware Workstation 准备工作：需要在VMware Workstation中建立你的虚拟机（相当于服务器），并且开启虚拟机；Xshell中建立会话（配置主机和用户名密码） 上传jsp项目：">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -198,7 +198,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VsCode/">VsCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jsp/">jsp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JDBC/">JDBC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VsCode/">VsCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jsp/">jsp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
                     </div>
                 </section>
                 
@@ -314,7 +314,8 @@
         <p>记录如何部署jsp项目到远程虚拟机或者服务器上</p>
 <h4 id="准备工具："><a href="#准备工具：" class="headerlink" title="准备工具："></a>准备工具：</h4><p>Xshell6、Xftp6、VMware Workstation</p>
 <h4 id="准备工作："><a href="#准备工作：" class="headerlink" title="准备工作："></a>准备工作：</h4><p>需要在VMware Workstation中建立你的虚拟机（相当于服务器），并且开启虚拟机；<br>Xshell中建立会话（配置主机和用户名密码）</p>
-<h4 id="上传jsp项目："><a href="#上传jsp项目：" class="headerlink" title="上传jsp项目："></a>上传jsp项目：</h4><p>Xftp6 新建会话，配置主机ip，这和Xshell配置差不多，点击连接，传输到tomcat的同级目录下，<br>进入tomcat的同级目录下，解压jsp项目，ls查看是否存在pom，然后执行mvn install，<br>会在target下生成war包，然后mv命令移动war包到tomcat的webapps下，<br>通过主机ip加8080加项目名称即可访问。<br>这是静态web项目部署方式，动态web直接将项目放在tomcat的webapp下即可。</p>
+<h4 id="上传jsp项目："><a href="#上传jsp项目：" class="headerlink" title="上传jsp项目："></a>上传jsp项目：</h4><a id="more"></a>
+<p>Xftp6 新建会话，配置主机ip，这和Xshell配置差不多，点击连接，传输到tomcat的同级目录下，<br>进入tomcat的同级目录下，解压jsp项目，cd进入jsp项目，ls查看是否存在pom，然后执行mvn install，<br>会在target下生成war包，然后mv命令移动war包到tomcat的webapps下，<br>通过主机ip加8080加项目名称即可访问。<br>这是静态web项目部署方式，动态web直接将项目放在tomcat的webapp下即可。</p>
 <h4 id="常用命令："><a href="#常用命令：" class="headerlink" title="常用命令："></a>常用命令：</h4><p>主机ip查看：ifconfig<br>开启tomcat服务：./bin/startup.sh    在bin上一级目录<br>关闭服务：./bin/shutdown.sh<br>解压zip：unzip jsp.zip<br>wget 下载<br>tar -xzvf 解压tar</p>
 
       
@@ -327,7 +328,7 @@
         <p><span>本文标题:</span><a href="/2019/04/30/部署jsp到虚拟机服务器上/">部署jsp项目到虚拟机服务器上</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Zhou Hang</a></p>
         <p><span>发布时间:</span>2019-04-30, 21:59:14</p>
-        <p><span>最后更新:</span>2019-04-30, 22:34:04</p>
+        <p><span>最后更新:</span>2019-05-02, 18:03:23</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/04/30/部署jsp到虚拟机服务器上/" title="部署jsp项目到虚拟机服务器上">http://zhouhangzooo.github.io/2019/04/30/部署jsp到虚拟机服务器上/</a>
             <span class="copy-path" data-clipboard-text="原文: http://zhouhangzooo.github.io/2019/04/30/部署jsp到虚拟机服务器上/　　作者: Zhou Hang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -341,6 +342,12 @@
 
 
     <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2019/05/02/JDBC基础使用/">
+                    JDBC基础使用
+                </a>
+            </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
@@ -430,7 +437,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2019/05/02/JDBC基础使用/" title="上一篇: JDBC基础使用">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
@@ -442,7 +451,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/04/30/部署jsp到虚拟机服务器上/">部署jsp项目到虚拟机服务器上</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/24/node-js-Https请求传递数据/">node.js Https请求传递数据</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/23/node-js请求https出现乱码解决方案/">node.js请求https出现乱码解决方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/20/hexo显示github图标解决方法/">hexo显示github图标解决方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/17/Java中的-用法/">Java中的->用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/16/typeScript定义全局变量供其他ts文件使用/">typeScript定义全局变量供其他ts文件使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/13/JavaScript的then-用法/">JavaScript的then()用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/10/vscode插件与源码通信/">vscode插件调用源码功能</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/06/git最实用命令/">git最实用命令总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/05/github提交没有贡献解决方案/">github提交没有贡献解决方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/04/vscode调试vue项目/">vscode调试vue项目</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/03/vscode插件与webview相互通信/">vscode插件与webview相互通信</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/05/02/JDBC基础使用/">JDBC基础使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/30/部署jsp到虚拟机服务器上/">部署jsp项目到虚拟机服务器上</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/24/node-js-Https请求传递数据/">node.js Https请求传递数据</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/23/node-js请求https出现乱码解决方案/">node.js请求https出现乱码解决方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/20/hexo显示github图标解决方法/">hexo显示github图标解决方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/17/Java中的-用法/">Java中的->用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/16/typeScript定义全局变量供其他ts文件使用/">typeScript定义全局变量供其他ts文件使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/13/JavaScript的then-用法/">JavaScript的then()用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/10/vscode插件与源码通信/">vscode插件调用源码功能</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/06/git最实用命令/">git最实用命令总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/05/github提交没有贡献解决方案/">github提交没有贡献解决方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/04/vscode调试vue项目/">vscode调试vue项目</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/03/vscode插件与webview相互通信/">vscode插件与webview相互通信</a></li></ul>
 
 
 
