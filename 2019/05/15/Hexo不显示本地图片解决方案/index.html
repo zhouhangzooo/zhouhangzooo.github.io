@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="记录如何部署jsp项目到远程虚拟机或者服务器上 准备工具：Xshell6、Xftp6、VMware Workstation 准备工作：需要在VMware Workstation中建立你的虚拟机（相当于服务器），并且开启虚拟机；Xshell中建立会话（配置主机和用户名密码） 上传jsp项目：">
-<meta name="keywords" content="jsp,服务器">
+<meta name="description" content="查看主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true还是false，如果是true，那么会创建文章时会自动生成文章同名文件夹，这个看你具体设置。但我发现，如果你设置为true，引用本地图片就是：![](xxxx/图片名.jpg) xxxx为你文件夹名但如果是false，那么你手动新建的同名文件夹，如果![](xxxx/图片名.jpg)无法显示图片，">
+<meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="部署jsp项目到虚拟机服务器上">
-<meta property="og:url" content="http://zhouhangzooo.github.io/2019/04/30/部署jsp到虚拟机服务器上/index.html">
+<meta property="og:title" content="Hexo不显示本地图片解决方案">
+<meta property="og:url" content="http://zhouhangzooo.github.io/2019/05/15/Hexo不显示本地图片解决方案/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="记录如何部署jsp项目到远程虚拟机或者服务器上 准备工具：Xshell6、Xftp6、VMware Workstation 准备工作：需要在VMware Workstation中建立你的虚拟机（相当于服务器），并且开启虚拟机；Xshell中建立会话（配置主机和用户名密码） 上传jsp项目：">
+<meta property="og:description" content="查看主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true还是false，如果是true，那么会创建文章时会自动生成文章同名文件夹，这个看你具体设置。但我发现，如果你设置为true，引用本地图片就是：![](xxxx/图片名.jpg) xxxx为你文件夹名但如果是false，那么你手动新建的同名文件夹，如果![](xxxx/图片名.jpg)无法显示图片，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-02T10:03:23.963Z">
+<meta property="og:updated_time" content="2019-05-15T05:45:54.290Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="部署jsp项目到虚拟机服务器上">
-<meta name="twitter:description" content="记录如何部署jsp项目到远程虚拟机或者服务器上 准备工具：Xshell6、Xftp6、VMware Workstation 准备工作：需要在VMware Workstation中建立你的虚拟机（相当于服务器），并且开启虚拟机；Xshell中建立会话（配置主机和用户名密码） 上传jsp项目：">
+<meta name="twitter:title" content="Hexo不显示本地图片解决方案">
+<meta name="twitter:description" content="查看主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true还是false，如果是true，那么会创建文章时会自动生成文章同名文件夹，这个看你具体设置。但我发现，如果你设置为true，引用本地图片就是：![](xxxx/图片名.jpg) xxxx为你文件夹名但如果是false，那么你手动新建的同名文件夹，如果![](xxxx/图片名.jpg)无法显示图片，">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>部署jsp项目到虚拟机服务器上 | Blog</title>
+<title>Hexo不显示本地图片解决方案 | Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -271,11 +271,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-部署jsp到虚拟机服务器上" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Hexo不显示本地图片解决方案" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/04/30/部署jsp到虚拟机服务器上/" class="article-date">
-      <time datetime="2019-04-30T13:59:14.000Z" itemprop="datePublished">2019-04-30</time>
+      <a href="/2019/05/15/Hexo不显示本地图片解决方案/" class="article-date">
+      <time datetime="2019-05-15T05:39:11.000Z" itemprop="datePublished">2019-05-15</time>
 </a>
 
 
@@ -290,7 +290,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      部署jsp项目到虚拟机服务器上
+      Hexo不显示本地图片解决方案
     </h1>
   
 
@@ -301,7 +301,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jsp/">jsp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -311,12 +311,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>记录如何部署jsp项目到远程虚拟机或者服务器上</p>
-<h4 id="准备工具："><a href="#准备工具：" class="headerlink" title="准备工具："></a>准备工具：</h4><p>Xshell6、Xftp6、VMware Workstation</p>
-<h4 id="准备工作："><a href="#准备工作：" class="headerlink" title="准备工作："></a>准备工作：</h4><p>需要在VMware Workstation中建立你的虚拟机（相当于服务器），并且开启虚拟机；<br>Xshell中建立会话（配置主机和用户名密码）</p>
-<h4 id="上传jsp项目："><a href="#上传jsp项目：" class="headerlink" title="上传jsp项目："></a>上传jsp项目：</h4><a id="more"></a>
-<p>Xftp6 新建会话，配置主机ip，这和Xshell配置差不多，点击连接，传输到tomcat的同级目录下，<br>进入tomcat的同级目录下，解压jsp项目，cd进入jsp项目，ls查看是否存在pom，然后执行mvn install，<br>会在target下生成war包，然后mv命令移动war包到tomcat的webapps下，<br>通过主机ip加8080加项目名称即可访问。<br>这是静态web项目部署方式，动态web直接将项目放在tomcat的webapp下即可。</p>
-<h4 id="常用命令："><a href="#常用命令：" class="headerlink" title="常用命令："></a>常用命令：</h4><p>主机ip查看：ifconfig<br>开启tomcat服务：./bin/startup.sh    在bin上一级目录<br>关闭服务：./bin/shutdown.sh<br>解压zip：unzip jsp.zip<br>wget 下载<br>tar -xzvf 解压tar</p>
+        <p>查看主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true还是false，<br>如果是true，那么会创建文章时会自动生成文章同名文件夹，这个看你具体设置。<br>但我发现，如果你设置为true，引用本地图片就是：<br>![](xxxx/图片名.jpg) xxxx为你文件夹名<br>但如果是false，那么你手动新建的同名文件夹，如果<br>![](xxxx/图片名.jpg)无法显示图片，<br>需要改为：<br>![](a.jpg)<br>也就是不用前缀xxxx/，这样虽然在本地markdown无法预览，但部署到远程是看得见的。</p>
 
       
     </div>
@@ -325,13 +320,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/04/30/部署jsp到虚拟机服务器上/">部署jsp项目到虚拟机服务器上</a></p>
+        <p><span>本文标题:</span><a href="/2019/05/15/Hexo不显示本地图片解决方案/">Hexo不显示本地图片解决方案</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Zhou Hang</a></p>
-        <p><span>发布时间:</span>2019-04-30, 21:59:14</p>
-        <p><span>最后更新:</span>2019-05-02, 18:03:23</p>
+        <p><span>发布时间:</span>2019-05-15, 13:39:11</p>
+        <p><span>最后更新:</span>2019-05-15, 13:45:54</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/04/30/部署jsp到虚拟机服务器上/" title="部署jsp项目到虚拟机服务器上">http://zhouhangzooo.github.io/2019/04/30/部署jsp到虚拟机服务器上/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://zhouhangzooo.github.io/2019/04/30/部署jsp到虚拟机服务器上/　　作者: Zhou Hang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/05/15/Hexo不显示本地图片解决方案/" title="Hexo不显示本地图片解决方案">http://zhouhangzooo.github.io/2019/05/15/Hexo不显示本地图片解决方案/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://zhouhangzooo.github.io/2019/05/15/Hexo不显示本地图片解决方案/　　作者: Zhou Hang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -343,16 +338,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/05/02/JDBC基础使用/">
-                    JDBC基础使用
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/04/24/node-js-Https请求传递数据/">
-                    node.js Https请求传递数据
+                <a href="/2019/05/13/vscode二次开发界面篇/">
+                    vscode二次开发界面篇
                 </a>
             </div>
         
@@ -364,7 +353,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#准备工具："><span class="toc-number">1.</span> <span class="toc-text">准备工具：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#准备工作："><span class="toc-number">2.</span> <span class="toc-text">准备工作：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#上传jsp项目："><span class="toc-number">3.</span> <span class="toc-text">上传jsp项目：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#常用命令："><span class="toc-number">4.</span> <span class="toc-text">常用命令：</span></a></li></ol>
+            
         
     </div>
     <style>
@@ -400,7 +389,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"部署jsp项目到虚拟机服务器上　| Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Hexo不显示本地图片解决方案　| Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -437,15 +426,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/05/02/JDBC基础使用/" title="上一篇: JDBC基础使用">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/04/24/node-js-Https请求传递数据/" title="下一篇: node.js Https请求传递数据">
+            <a href="/2019/05/13/vscode二次开发界面篇/" title="下一篇: vscode二次开发界面篇">
                 <i class="fa fa-angle-right"></i>
             </a>
         

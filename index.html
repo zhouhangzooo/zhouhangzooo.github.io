@@ -271,6 +271,66 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-Hexo不显示本地图片解决方案" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/05/15/Hexo不显示本地图片解决方案/" class="article-date">
+      <time datetime="2019-05-15T05:39:11.000Z" itemprop="datePublished">2019-05-15</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/15/Hexo不显示本地图片解决方案/">Hexo不显示本地图片解决方案</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>查看主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true还是false，<br>如果是true，那么会创建文章时会自动生成文章同名文件夹，这个看你具体设置。<br>但我发现，如果你设置为true，引用本地图片就是：<br>![](xxxx/图片名.jpg) xxxx为你文件夹名<br>但如果是false，那么你手动新建的同名文件夹，如果<br>![](xxxx/图片名.jpg)无法显示图片，<br>需要改为：<br>![](a.jpg)<br>也就是不用前缀xxxx/，这样虽然在本地markdown无法预览，但部署到远程是看得见的。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-vscode二次开发界面篇" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -838,67 +898,6 @@
         <p class="article-more-link">
           <a href="/2019/04/16/typeScript定义全局变量供其他ts文件使用/#more">阅读全文 >></a>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-JavaScript的then-用法" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/04/13/JavaScript的then-用法/" class="article-date">
-      <time datetime="2019-04-13T02:21:31.000Z" itemprop="datePublished">2019-04-13</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/13/JavaScript的then-用法/">JavaScript的then()用法</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>昨天做项目碰到一个问题：要执行A方法，方法里面有写入文件的耗时操作，然后我想等A方法执行完了再执行B方法，因此我们可以用js特有的then()方法，那么它可以帮我们完成这个问题。<br>封装A方法为函数，A方法：vscode.commands.executeCommand(‘workbench.action.files.newUntitledFile’)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const p = function()&#123;</span><br><span class="line">	return vscode.commands.executeCommand(&apos;workbench.action.files.newUntitledFile&apos;)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>再执行B方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p().then(val =&gt; &#123;</span><br><span class="line">	vscode.commands.executeCommand(&quot;extension.demo.openWebview&quot;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
-    </div>
-
       
       <div class="clearfix"></div>
     </div>

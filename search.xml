@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Hexo不显示本地图片解决方案</title>
+      <link href="/2019/05/15/Hexo%E4%B8%8D%E6%98%BE%E7%A4%BA%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+      <url>/2019/05/15/Hexo%E4%B8%8D%E6%98%BE%E7%A4%BA%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+      
+        <content type="html"><![CDATA[<p>查看主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true还是false，<br>如果是true，那么会创建文章时会自动生成文章同名文件夹，这个看你具体设置。<br>但我发现，如果你设置为true，引用本地图片就是：<br>![](xxxx/图片名.jpg) xxxx为你文件夹名<br>但如果是false，那么你手动新建的同名文件夹，如果<br>![](xxxx/图片名.jpg)无法显示图片，<br>需要改为：<br>![](a.jpg)<br>也就是不用前缀xxxx/，这样虽然在本地markdown无法预览，但部署到远程是看得见的。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vscode二次开发界面篇</title>
       <link href="/2019/05/13/vscode%E4%BA%8C%E6%AC%A1%E5%BC%80%E5%8F%91%E7%95%8C%E9%9D%A2%E7%AF%87/"/>
       <url>/2019/05/13/vscode%E4%BA%8C%E6%AC%A1%E5%BC%80%E5%8F%91%E7%95%8C%E9%9D%A2%E7%AF%87/</url>
