@@ -196,7 +196,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JDBC/">JDBC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JSP/">JSP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VsCode/">VsCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jsp/">jsp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JDBC/">JDBC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JSP/">JSP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/">Tomcat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VsCode/">VsCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jsp/">jsp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
                     </div>
                 </section>
                 
@@ -270,6 +270,68 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-Tomcat无法启动和访问项目出现404" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/05/19/Tomcat无法启动和访问项目出现404/" class="article-date">
+      <time datetime="2019-05-19T04:41:26.000Z" itemprop="datePublished">2019-05-19</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/19/Tomcat无法启动和访问项目出现404/">Tomcat无法启动和访问项目出现404</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>首先我使用的是eclipse工具开发，Tomcat是9.0，之前项目启动使用Tomcat然后访问一直是可以的，昨天开始写Servlet，然后就想访问一下，结果Tomcat启动不起来了，网上大多说web.xml中配置的<url-pattern>路径写的不对，其实如果你是new Servlet，eclipse默认会给你配置，那么配置路径是没有问题的，除非你改了Servlet类名，那么需要手动改一下。下面直接说解决方法：</url-pattern></p>
+<h2 id="Tomcat启动不了"><a href="#Tomcat启动不了" class="headerlink" title="Tomcat启动不了"></a>Tomcat启动不了</h2><p>如果项目（代码）本身没有问题，那么确认server locations中的server path和deply path是否一致，如图<br><img src="Tomcat.jpg" alt><br>我们在server locations中选择第二个，也就是Use Tomcat installation，同时Server Path是你下载Tomcat的路径，Deploy path是你Tomcat的webapps目录路径，我的是：C:\dev\tomcat\apache-tomcat-9.0.2\webapps，选择并保存，图片只显示webapps，但我们一定要选择绝对路径。<br>如果没法选择server locations，那么删除Tomcat重新配置即可选择。</p>
+<h2 id="项目访问为404"><a href="#项目访问为404" class="headerlink" title="项目访问为404"></a>项目访问为404</h2><p>如果你的Tomcat可以访问，项目访问为404，那么很可能是你的项目结构问题，如<a href="http://localhost:8080/books/出现404，那么在web中welcome-file这一项是指定你访问的默认页面，如：" target="_blank" rel="noopener">http://localhost:8080/books/出现404，那么在web中welcome-file这一项是指定你访问的默认页面，如：</a><welcome-file>login.jsp</welcome-file>，那么你访问就是<a href="http://localhost:8080/books/login.jsp，请注意是否存在login.jsp文件，路径是否在webapp目录下。如果仍然出现404，那么可以新建一个工作区试试。" target="_blank" rel="noopener">http://localhost:8080/books/login.jsp，请注意是否存在login.jsp文件，路径是否在webapp目录下。如果仍然出现404，那么可以新建一个工作区试试。</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tomcat/">Tomcat</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-Hexo不显示本地图片解决方案" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -831,72 +893,6 @@
       
         <p class="article-more-link">
           <a href="/2019/04/17/Java中的-用法/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-typeScript定义全局变量供其他ts文件使用" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/04/16/typeScript定义全局变量供其他ts文件使用/" class="article-date">
-      <time datetime="2019-04-16T09:23:39.000Z" itemprop="datePublished">2019-04-16</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/16/typeScript定义全局变量供其他ts文件使用/">typeScript定义全局变量供其他ts文件使用</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h2 id="定义模块"><a href="#定义模块" class="headerlink" title="定义模块"></a>定义模块</h2><p>先在ts中定义一个模块<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export module FileModule &#123;</span><br><span class="line">	export var flag: boolean = false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>在另一个ts文件中引入模块<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#123; FileModule &#125; from &apos;定义ts模块路径&apos;; //格式如下：vs/workbench/parts/files/electron-browser/fileActions</span><br></pre></td></tr></table></figure></p>
-<p>接着就可以使用了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FileModule.flag = true;</span><br></pre></td></tr></table></figure></p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VsCode/">VsCode</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2019/04/16/typeScript定义全局变量供其他ts文件使用/#more">阅读全文 >></a>
         </p>
       
       <div class="clearfix"></div>
