@@ -23,12 +23,12 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="首先我使用的是eclipse工具开发，Tomcat是9.0，之前项目启动使用Tomcat然后访问一直是可以的，昨天开始写Servlet，然后就想访问一下，结果Tomcat启动不起来了，网上大多说web.xml中配置的路径写的不对，其实如果你是new Servlet，eclipse默认会给你配置，那么配置路径是没有问题的，除非你改了Servlet类名，那么需要手动改一下。下面直接说解决方法： Tom">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://zhouhangzooo.github.io/2019/05/19/Tomcat无法启动和访问项目出现404/Tomcat无法启动和访问项目出现404/Tomcat.jpg">
-<meta property="og:updated_time" content="2019-05-19T06:44:55.052Z">
+<meta property="og:image" content="http://zhouhangzooo.github.io/2019/05/19/Tomcat无法启动和访问项目出现404/Tomcat.jpg">
+<meta property="og:updated_time" content="2019-05-19T06:58:11.453Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tomcat无法启动和访问项目出现404">
 <meta name="twitter:description" content="首先我使用的是eclipse工具开发，Tomcat是9.0，之前项目启动使用Tomcat然后访问一直是可以的，昨天开始写Servlet，然后就想访问一下，结果Tomcat启动不起来了，网上大多说web.xml中配置的路径写的不对，其实如果你是new Servlet，eclipse默认会给你配置，那么配置路径是没有问题的，除非你改了Servlet类名，那么需要手动改一下。下面直接说解决方法： Tom">
-<meta name="twitter:image" content="http://zhouhangzooo.github.io/2019/05/19/Tomcat无法启动和访问项目出现404/Tomcat无法启动和访问项目出现404/Tomcat.jpg">
+<meta name="twitter:image" content="http://zhouhangzooo.github.io/2019/05/19/Tomcat无法启动和访问项目出现404/Tomcat.jpg">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -314,7 +314,7 @@
       
           
         <p>首先我使用的是eclipse工具开发，Tomcat是9.0，之前项目启动使用Tomcat然后访问一直是可以的，昨天开始写Servlet，然后就想访问一下，结果Tomcat启动不起来了，网上大多说web.xml中配置的<url-pattern>路径写的不对，其实如果你是new Servlet，eclipse默认会给你配置，那么配置路径是没有问题的，除非你改了Servlet类名，那么需要手动改一下。下面直接说解决方法：</url-pattern></p>
-<h2 id="Tomcat启动不了"><a href="#Tomcat启动不了" class="headerlink" title="Tomcat启动不了"></a>Tomcat启动不了</h2><p>如果项目（代码）本身没有问题，那么确认server locations中的server path和deply path是否一致，如图<br><img src="./Tomcat无法启动和访问项目出现404/Tomcat.jpg" alt><br>我们在server locations中选择第二个，也就是Use Tomcat installation，同时Server Path是你下载Tomcat的路径，Deploy path是你Tomcat的webapps目录路径，我的是：C:\dev\tomcat\apache-tomcat-9.0.2\webapps，选择并保存，图片只显示webapps，但我们一定要选择绝对路径。<br>如果没法选择server locations，那么删除Tomcat重新配置即可选择。</p>
+<h2 id="Tomcat启动不了"><a href="#Tomcat启动不了" class="headerlink" title="Tomcat启动不了"></a>Tomcat启动不了</h2><p>如果项目（代码）本身没有问题，那么确认server locations中的server path和deply path是否一致，如图<br><img src="Tomcat.jpg" alt><br>我们在server locations中选择第二个，也就是Use Tomcat installation，同时Server Path是你下载Tomcat的路径，Deploy path是你Tomcat的webapps目录路径，我的是：C:\dev\tomcat\apache-tomcat-9.0.2\webapps，选择并保存，图片只显示webapps，但我们一定要选择绝对路径。<br>如果没法选择server locations，那么删除Tomcat重新配置即可选择。</p>
 <h2 id="项目访问为404"><a href="#项目访问为404" class="headerlink" title="项目访问为404"></a>项目访问为404</h2><p>如果你的Tomcat可以访问，项目访问为404，那么很可能是你的项目结构问题，如<a href="http://localhost:8080/books/出现404，那么在web中welcome-file这一项是指定你访问的默认页面，如：" target="_blank" rel="noopener">http://localhost:8080/books/出现404，那么在web中welcome-file这一项是指定你访问的默认页面，如：</a><welcome-file>login.jsp</welcome-file>，那么你访问就是<a href="http://localhost:8080/books/login.jsp，请注意是否存在login.jsp文件，路径是否在webapp目录下。如果仍然出现404，那么可以新建一个工作区试试。" target="_blank" rel="noopener">http://localhost:8080/books/login.jsp，请注意是否存在login.jsp文件，路径是否在webapp目录下。如果仍然出现404，那么可以新建一个工作区试试。</a></p>
 
       
@@ -327,7 +327,7 @@
         <p><span>本文标题:</span><a href="/2019/05/19/Tomcat无法启动和访问项目出现404/">Tomcat无法启动和访问项目出现404</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Zhou Hang</a></p>
         <p><span>发布时间:</span>2019-05-19, 12:41:26</p>
-        <p><span>最后更新:</span>2019-05-19, 14:44:55</p>
+        <p><span>最后更新:</span>2019-05-19, 14:58:11</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/05/19/Tomcat无法启动和访问项目出现404/" title="Tomcat无法启动和访问项目出现404">http://zhouhangzooo.github.io/2019/05/19/Tomcat无法启动和访问项目出现404/</a>
             <span class="copy-path" data-clipboard-text="原文: http://zhouhangzooo.github.io/2019/05/19/Tomcat无法启动和访问项目出现404/　　作者: Zhou Hang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
