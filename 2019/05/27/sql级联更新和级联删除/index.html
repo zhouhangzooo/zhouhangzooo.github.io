@@ -15,18 +15,21 @@
 
 
 
-<meta name="description" content="本人使用的是yelee主题我这里总结一下： 操作一12首先下载一个github图标，放在/yelee/source/img/目录下，命名为GitHub.png，注意是GitHub，而不是Github和github；接下来删除在/yelee/source/css/_partial/customise/social-icon.styl的46-50行，然后在img-logo = 添加GitHub whi">
-<meta name="keywords" content="hexo">
+<meta name="description" content="sql级联更新执行更新book表失败后来查找原因是book表被borrow引用了，所以数据库不知道book表更新borrow表要不要更新，所以我们需要进行级联更新，也就是book表更新，borrow表和其它引用了book表也更新外键。book表borrow表级联更新在创建表时就指定级联更新和级联删除12345678910111213141516171819202122232425262728293">
+<meta name="keywords" content="SQL,Mysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo显示github图标解决方法">
-<meta property="og:url" content="http://zhouhangzooo.github.io/2019/04/20/hexo显示github图标解决方法/index.html">
+<meta property="og:title" content="sql级联更新和级联删除">
+<meta property="og:url" content="http://zhouhangzooo.github.io/2019/05/27/sql级联更新和级联删除/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="本人使用的是yelee主题我这里总结一下： 操作一12首先下载一个github图标，放在/yelee/source/img/目录下，命名为GitHub.png，注意是GitHub，而不是Github和github；接下来删除在/yelee/source/css/_partial/customise/social-icon.styl的46-50行，然后在img-logo = 添加GitHub whi">
+<meta property="og:description" content="sql级联更新执行更新book表失败后来查找原因是book表被borrow引用了，所以数据库不知道book表更新borrow表要不要更新，所以我们需要进行级联更新，也就是book表更新，borrow表和其它引用了book表也更新外键。book表borrow表级联更新在创建表时就指定级联更新和级联删除12345678910111213141516171819202122232425262728293">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-22T02:31:50.322Z">
+<meta property="og:image" content="http://zhouhangzooo.github.io/2019/05/27/sql级联更新和级联删除/sql1.png">
+<meta property="og:image" content="http://zhouhangzooo.github.io/2019/05/27/sql级联更新和级联删除/sql2.png">
+<meta property="og:updated_time" content="2019-05-27T15:22:15.954Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo显示github图标解决方法">
-<meta name="twitter:description" content="本人使用的是yelee主题我这里总结一下： 操作一12首先下载一个github图标，放在/yelee/source/img/目录下，命名为GitHub.png，注意是GitHub，而不是Github和github；接下来删除在/yelee/source/css/_partial/customise/social-icon.styl的46-50行，然后在img-logo = 添加GitHub whi">
+<meta name="twitter:title" content="sql级联更新和级联删除">
+<meta name="twitter:description" content="sql级联更新执行更新book表失败后来查找原因是book表被borrow引用了，所以数据库不知道book表更新borrow表要不要更新，所以我们需要进行级联更新，也就是book表更新，borrow表和其它引用了book表也更新外键。book表borrow表级联更新在创建表时就指定级联更新和级联删除12345678910111213141516171819202122232425262728293">
+<meta name="twitter:image" content="http://zhouhangzooo.github.io/2019/05/27/sql级联更新和级联删除/sql1.png">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -56,7 +59,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>hexo显示github图标解决方法 | Blog</title>
+<title>sql级联更新和级联删除 | Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -271,11 +274,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-hexo显示github图标解决方法" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-sql级联更新和级联删除" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/04/20/hexo显示github图标解决方法/" class="article-date">
-      <time datetime="2019-04-20T09:47:37.000Z" itemprop="datePublished">2019-04-20</time>
+      <a href="/2019/05/27/sql级联更新和级联删除/" class="article-date">
+      <time datetime="2019-05-27T15:15:29.000Z" itemprop="datePublished">2019-05-27</time>
 </a>
 
 
@@ -290,7 +293,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      hexo显示github图标解决方法
+      sql级联更新和级联删除
     </h1>
   
 
@@ -301,7 +304,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/">Mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQL/">SQL</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -311,11 +314,11 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>本人使用的是yelee主题<br>我这里总结一下：</p>
-<h2 id="操作一"><a href="#操作一" class="headerlink" title="操作一"></a>操作一</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">首先下载一个github图标，放在/yelee/source/img/目录下，命名为GitHub.png，注意是GitHub，而不是Github和github；</span><br><span class="line">接下来删除在/yelee/source/css/_partial/customise/social-icon.styl的46-50行，然后在img-logo = 添加GitHub white 100。</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>GitHub white 100 的意思是github添加白色背景且透明度为100，背景可以自行选择<br>hexo clean 清理缓存<br><a href="https://XXX/img/GitHub.png" target="_blank" rel="noopener">https://XXX/img/GitHub.png</a> XXX填入你的仓库地址</p>
-<p>注意：如果按我的方法一步步走，最终会出现github图片，如果hexo s预览出现图片但线上不显示，那么可能你一开始命名的图片名字不同，我由于一开始命名不同，我命名了Github.png了，因此我在通过F12查看，说找不到图片，<a href="https://zhouhangzooo.github.io/img/GitHub.png。">https://zhouhangzooo.github.io/img/GitHub.png。</a><br>这个地址返回的是404，我想可能是我一开始命名的问题了，我试着输入<a href="https://zhouhangzooo.github.io/img/Github.png，">https://zhouhangzooo.github.io/img/Github.png，</a><br>结果果然图片出现了，这个问题和命名标签问题是一样的，对于已经命名好的标签，我们不能去修改，至于为什么我也不知道，但如果修改了，标签下的文章就找不到了，这个不知是不是hexo的机制问题，只认定了初次创建的标签，就算你修改了它指引的地址也不会改变，所以我们尽量不要改标签、标题名字和文件夹名字等。<br>如果和我一样命名出现了错误，可以参考我的解决方法是：先将img目录下的github图片和GitHub white 100 删除，然后执行 hexo clean &amp;&amp; hexo g 命令，再执行 hexo d ，接下来重新执行操作一。</p>
+        <p>sql级联更新<br>执行更新book表失败<br>后来查找原因是book表被borrow引用了，所以数据库不知道book表更新borrow表要不要更新，所以我们需要进行级联更新，也就是book表更新，borrow表和其它引用了book表也更新外键。<br>book表<br><img src="sql1.png" alt><br>borrow表<br><img src="sql2.png" alt><br>级联更新<br>在创建表时就指定级联更新和级联删除<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`book`</span> (</span><br><span class="line">  <span class="string">`ISBN`</span> <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`book_name`</span> <span class="built_in">varchar</span>(<span class="number">50</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`book_author`</span> <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`book_pub`</span> <span class="built_in">varchar</span>(<span class="number">50</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`sort_id`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`book_record`</span> <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`book_price`</span> <span class="built_in">decimal</span>(<span class="number">10</span>,<span class="number">0</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`book_borrow`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">DEFAULT</span> <span class="string">'0'</span>,</span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`ISBN`</span>),</span><br><span class="line">  <span class="keyword">KEY</span> <span class="string">`sort_id`</span> (<span class="string">`sort_id`</span>),</span><br><span class="line">  <span class="keyword">CONSTRAINT</span> <span class="string">`book_ibfk_1`</span> <span class="keyword">FOREIGN</span> <span class="keyword">KEY</span> (<span class="string">`sort_id`</span>) <span class="keyword">REFERENCES</span> <span class="string">`book_sort`</span> (<span class="string">`sort_id`</span>)</span><br><span class="line">) <span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`borrow`</span> (</span><br><span class="line">  <span class="string">`id`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT,</span><br><span class="line">  <span class="string">`ISBN`</span> <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`s_id`</span> <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`price`</span> <span class="built_in">decimal</span>(<span class="number">10</span>,<span class="number">0</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`book_name`</span> <span class="built_in">varchar</span>(<span class="number">50</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`borrow_date`</span> <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`expect_return_date`</span> <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`return_date`</span> <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`book_borrow`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`id`</span>),</span><br><span class="line">  <span class="keyword">KEY</span> <span class="string">`s_id`</span> (<span class="string">`s_id`</span>),</span><br><span class="line">  <span class="keyword">KEY</span> <span class="string">`ISBN`</span> (<span class="string">`ISBN`</span>),</span><br><span class="line">  <span class="keyword">CONSTRAINT</span> <span class="string">`borrow_ibfk_1`</span> <span class="keyword">FOREIGN</span> <span class="keyword">KEY</span> (<span class="string">`s_id`</span>) <span class="keyword">REFERENCES</span> <span class="string">`student`</span> (<span class="string">`s_id`</span>) <span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">CASCADE</span> <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CASCADE</span>,</span><br><span class="line">  <span class="keyword">CONSTRAINT</span> <span class="string">`borrow_ibfk_2`</span> <span class="keyword">FOREIGN</span> <span class="keyword">KEY</span> (<span class="string">`ISBN`</span>) <span class="keyword">REFERENCES</span> <span class="string">`book`</span> (<span class="string">`ISBN`</span>) <span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">CASCADE</span> <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CASCADE</span></span><br><span class="line">) <span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span> AUTO_INCREMENT=<span class="number">4</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8</span><br></pre></td></tr></table></figure></p>
+<p>如果是已经创建了数据表，那么先撤销外键约束<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> borrow</span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">FOREIGN</span> <span class="keyword">KEY</span> fk_borrow1 这里为你外键名比如<span class="keyword">constraint</span>后面的名称</span><br></pre></td></tr></table></figure></p>
+<p>然后再重新增加约束<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> Orders</span><br><span class="line"><span class="keyword">ADD</span> <span class="keyword">CONSTRAINT</span> fk_borrow1</span><br><span class="line"><span class="keyword">FOREIGN</span> <span class="keyword">KEY</span> (s_id)</span><br><span class="line"><span class="keyword">REFERENCES</span> student(s_Id) <span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">CASCADE</span> <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CASCADE</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> Orders</span><br><span class="line"><span class="keyword">ADD</span> <span class="keyword">CONSTRAINT</span> fk_borrow2</span><br><span class="line"><span class="keyword">FOREIGN</span> <span class="keyword">KEY</span> (ISBN)</span><br><span class="line"><span class="keyword">REFERENCES</span> book(ISBN) <span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">CASCADE</span> <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CASCADE</span>;</span><br></pre></td></tr></table></figure></p>
+<p>最后再执行更新<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> book <span class="keyword">SET</span> ISBN = <span class="string">'201905152321007'</span>, book_name = <span class="string">'javascript'</span>, book_author = <span class="string">'javascript作者'</span>, book_pub = <span class="string">'javascript出版社'</span>, book_borrow = <span class="number">1</span>, sort_id = <span class="number">1</span>, book_record = <span class="string">'2019-05-24'</span>, book_price = <span class="number">250</span> <span class="keyword">WHERE</span> ISBN = <span class="string">'201905152321001'</span>;</span><br></pre></td></tr></table></figure></p>
+<p>即可成功更新book表，而borrow表中的ISBN也跟着更新。</p>
 
       
     </div>
@@ -324,13 +327,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/04/20/hexo显示github图标解决方法/">hexo显示github图标解决方法</a></p>
+        <p><span>本文标题:</span><a href="/2019/05/27/sql级联更新和级联删除/">sql级联更新和级联删除</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Zhou Hang</a></p>
-        <p><span>发布时间:</span>2019-04-20, 17:47:37</p>
-        <p><span>最后更新:</span>2019-04-22, 10:31:50</p>
+        <p><span>发布时间:</span>2019-05-27, 23:15:29</p>
+        <p><span>最后更新:</span>2019-05-27, 23:22:15</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/04/20/hexo显示github图标解决方法/" title="hexo显示github图标解决方法">http://zhouhangzooo.github.io/2019/04/20/hexo显示github图标解决方法/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://zhouhangzooo.github.io/2019/04/20/hexo显示github图标解决方法/　　作者: Zhou Hang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/05/27/sql级联更新和级联删除/" title="sql级联更新和级联删除">http://zhouhangzooo.github.io/2019/05/27/sql级联更新和级联删除/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://zhouhangzooo.github.io/2019/05/27/sql级联更新和级联删除/　　作者: Zhou Hang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -342,16 +345,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/04/23/node-js请求https出现乱码解决方案/">
-                    node.js请求https出现乱码解决方案
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/04/17/Java中的-用法/">
-                    Java中的-&gt;用法
+                <a href="/2019/05/19/Tomcat无法启动和访问项目出现404/">
+                    Tomcat无法启动和访问项目出现404
                 </a>
             </div>
         
@@ -363,7 +360,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#操作一"><span class="toc-number">1.</span> <span class="toc-text">操作一</span></a></li></ol>
+            
         
     </div>
     <style>
@@ -399,7 +396,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"hexo显示github图标解决方法　| Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"sql级联更新和级联删除　| Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -436,15 +433,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/04/23/node-js请求https出现乱码解决方案/" title="上一篇: node.js请求https出现乱码解决方案">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/04/17/Java中的-用法/" title="下一篇: Java中的-&gt;用法">
+            <a href="/2019/05/19/Tomcat无法启动和访问项目出现404/" title="下一篇: Tomcat无法启动和访问项目出现404">
                 <i class="fa fa-angle-right"></i>
             </a>
         
