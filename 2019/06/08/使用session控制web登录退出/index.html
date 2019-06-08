@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="安装Debugger for Chrome插件找到“扩展”或者按快捷键“Ctrl+Shift+X”，输入Debugger for Chrome查找，并安装。 配置chrome到launch.json中然后打开“调试”或者快捷键“Ctrl+Shift+D”，点击配置按钮Open launch.json，弹出选项中选择Chrome，然后会创建并打开launch.json文件，将里面的内容替换成一下内容">
-<meta name="keywords" content="VsCode">
+<meta name="description" content="今天给大家说一个session的问题，首先是session的使用方法：使用&amp;lt;% session().setAttribute(“isLogin”, “true”); %&amp;gt; 获取/逻辑判断&amp;lt;% session.getAttribute(“isLogin”); %&amp;gt; 移除&amp;lt;% session.removeAttribute(“isLogin”); %&amp;gt;我是这样想的，">
+<meta name="keywords" content="Java,JSP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vscode调试vue项目">
-<meta property="og:url" content="http://zhouhangzooo.github.io/2019/04/04/vscode调试vue项目/index.html">
+<meta property="og:title" content="使用session控制web登录退出">
+<meta property="og:url" content="http://zhouhangzooo.github.io/2019/06/08/使用session控制web登录退出/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="安装Debugger for Chrome插件找到“扩展”或者按快捷键“Ctrl+Shift+X”，输入Debugger for Chrome查找，并安装。 配置chrome到launch.json中然后打开“调试”或者快捷键“Ctrl+Shift+D”，点击配置按钮Open launch.json，弹出选项中选择Chrome，然后会创建并打开launch.json文件，将里面的内容替换成一下内容">
+<meta property="og:description" content="今天给大家说一个session的问题，首先是session的使用方法：使用&amp;lt;% session().setAttribute(“isLogin”, “true”); %&amp;gt; 获取/逻辑判断&amp;lt;% session.getAttribute(“isLogin”); %&amp;gt; 移除&amp;lt;% session.removeAttribute(“isLogin”); %&amp;gt;我是这样想的，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-19T06:12:21.755Z">
+<meta property="og:updated_time" content="2019-06-08T15:04:04.374Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vscode调试vue项目">
-<meta name="twitter:description" content="安装Debugger for Chrome插件找到“扩展”或者按快捷键“Ctrl+Shift+X”，输入Debugger for Chrome查找，并安装。 配置chrome到launch.json中然后打开“调试”或者快捷键“Ctrl+Shift+D”，点击配置按钮Open launch.json，弹出选项中选择Chrome，然后会创建并打开launch.json文件，将里面的内容替换成一下内容">
+<meta name="twitter:title" content="使用session控制web登录退出">
+<meta name="twitter:description" content="今天给大家说一个session的问题，首先是session的使用方法：使用&amp;lt;% session().setAttribute(“isLogin”, “true”); %&amp;gt; 获取/逻辑判断&amp;lt;% session.getAttribute(“isLogin”); %&amp;gt; 移除&amp;lt;% session.removeAttribute(“isLogin”); %&amp;gt;我是这样想的，">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>vscode调试vue项目 | Blog</title>
+<title>使用session控制web登录退出 | Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -271,11 +271,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-vscode调试vue项目" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-使用session控制web登录退出" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/04/04/vscode调试vue项目/" class="article-date">
-      <time datetime="2019-04-04T07:32:59.000Z" itemprop="datePublished">2019-04-04</time>
+      <a href="/2019/06/08/使用session控制web登录退出/" class="article-date">
+      <time datetime="2019-06-08T14:29:00.000Z" itemprop="datePublished">2019-06-08</time>
 </a>
 
 
@@ -290,7 +290,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      vscode调试vue项目
+      使用session控制web登录退出
     </h1>
   
 
@@ -301,7 +301,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VsCode/">VsCode</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JSP/">JSP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -311,10 +311,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="安装Debugger-for-Chrome插件"><a href="#安装Debugger-for-Chrome插件" class="headerlink" title="安装Debugger for Chrome插件"></a>安装Debugger for Chrome插件</h2><p>找到“扩展”或者按快捷键“Ctrl+Shift+X”，输入Debugger for Chrome查找，并安装。</p>
-<h2 id="配置chrome到launch-json中"><a href="#配置chrome到launch-json中" class="headerlink" title="配置chrome到launch.json中"></a>配置chrome到launch.json中</h2><p>然后打开“调试”或者快捷键“Ctrl+Shift+D”，点击配置按钮Open launch.json，弹出选项中选择Chrome，然后会创建并打开launch.json文件，将里面的内容替换成一下内容，默认内容是下面的内容<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;version&quot;: &quot;0.2.0&quot;,</span><br><span class="line">    &quot;configurations&quot;: [</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;type&quot;: &quot;chrome&quot;,</span><br><span class="line">        &quot;request&quot;: &quot;launch&quot;,</span><br><span class="line">        &quot;name&quot;: &quot;vuejs: chrome&quot;,</span><br><span class="line">        &quot;url&quot;: &quot;http://localhost:8080&quot;,</span><br><span class="line">        &quot;webRoot&quot;: &quot;$&#123;workspaceFolder&#125;/src&quot;,</span><br><span class="line">        &quot;breakOnLoad&quot;: true,</span><br><span class="line">        &quot;sourceMapPathOverrides&quot;: &#123;</span><br><span class="line">          &quot;webpack:///./src/*&quot;: &quot;$&#123;webRoot&#125;/*&quot;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="在终端运行命令npm-run-dev"><a href="#在终端运行命令npm-run-dev" class="headerlink" title="在终端运行命令npm run dev"></a>在终端运行命令npm run dev</h2><p>方法一（推荐）：直接快捷键”Ctrl+`“打开终端，运行命令npm run dev，然后直接F5即可打开chrome浏览器调试；<br>方法二：可以在vscode中右击vue项目的根目录，比如src，Open in Terminal（打开终端），然后再输入cd ..，回退到vue项目的根目录，我们的目的是让终端在项目的根目录上，然后就可以运行命令npm run dev，然后点击调试功能中的绿色箭头开启调试即可打开chrome浏览器调试。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\eluzhu\Desktop\项目\test\src&gt; cd ..</span><br><span class="line">PS C:\Users\eluzhu\Desktop\项目\test&gt; npm run dev</span><br></pre></td></tr></table></figure></p>
-<h2 id="断点调试"><a href="#断点调试" class="headerlink" title="断点调试"></a>断点调试</h2><p>直接在你想要查看的代码第几行左侧添加断点，设置成功可以看到比如200行左侧出现红点，至此断点调试就完成了。<br>另外，默认vscode对vue没有代码高亮支持，可以下载Vetur插件。</p>
+        <h2 id="今天给大家说一个session的问题，首先是session的使用方法："><a href="#今天给大家说一个session的问题，首先是session的使用方法：" class="headerlink" title="今天给大家说一个session的问题，首先是session的使用方法："></a>今天给大家说一个session的问题，首先是session的使用方法：</h2><h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p><font color="red">&lt;% session().setAttribute(“isLogin”, “true”); %&gt;</font></p>
+<h4 id="获取-逻辑判断"><a href="#获取-逻辑判断" class="headerlink" title="获取/逻辑判断"></a>获取/逻辑判断</h4><p><font color="red">&lt;% session.getAttribute(“isLogin”); %&gt;</font></p>
+<h4 id="移除"><a href="#移除" class="headerlink" title="移除"></a>移除</h4><p><font color="red">&lt;% session.removeAttribute(“isLogin”); %&gt;</font><br>我是这样想的，在登录成功之后给session赋值，然后在主页或别的页面获取session做判断，如果session属性的值为空，那么就是未登录，然后跳转到登录页面，下面按照我自己的想法开始写：<br>首先我在login.jsp中登录之后赋值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">		loginButton = function() &#123;</span><br><span class="line">			var id = $(&quot;#id&quot;).val(); //jqury val()方法返回元素value属性</span><br><span class="line">			var password = $(&quot;#password&quot;).val();</span><br><span class="line"></span><br><span class="line">			if (id == &apos;&apos;) &#123;</span><br><span class="line">				$(&quot;#info&quot;).text(&quot;提示：学号不能为空&quot;);</span><br><span class="line">			&#125; else if (password == &apos;&apos;) &#123;</span><br><span class="line">				$(&quot;#info&quot;).text(&quot;提示：密码不能为空&quot;);</span><br><span class="line">			&#125; else &#123;</span><br><span class="line">				$.ajax(&#123;</span><br><span class="line">					type : &quot;POST&quot;,</span><br><span class="line">					url : &quot;/books/StudentLoginServlet&quot;,</span><br><span class="line">					data : &#123;</span><br><span class="line">						id : id,</span><br><span class="line">						password : password</span><br><span class="line">					&#125;,</span><br><span class="line">					dataType : &quot;json&quot;,</span><br><span class="line">					success : function(data) &#123;</span><br><span class="line">						if (data.code == &quot;000000&quot;) &#123;</span><br><span class="line">                        	&lt;% session().setAttribute(&quot;isLogin&quot;, &quot;true&quot;); %&gt;</span><br><span class="line">							window.location.href = &quot;home.jsp?id=&quot; + data.data.id;</span><br><span class="line">						&#125; else &#123;</span><br><span class="line">							$(&quot;#info&quot;).text(data.message);</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>然后home.jsp判断<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;%</span><br><span class="line">		out.print(session.getAttribute(&quot;isLogin&quot;));</span><br><span class="line">		if (session.getAttribute(&quot;isLogin&quot;) == null || request.getParameter(&quot;id&quot;) == null)</span><br><span class="line">		&#123;</span><br><span class="line">			response.sendRedirect(&quot;login.jsp&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		String id = request.getParameter(&quot;id&quot;);</span><br><span class="line">	%&gt;</span><br><span class="line">    &lt;div style=&quot;display: flex&quot;&gt;</span><br><span class="line">		&lt;h3&gt;</span><br><span class="line">			欢迎您：&lt;%=id%&gt;&lt;/h3&gt;</span><br><span class="line">		&lt;form style=&quot;margin-left: 30px&quot; action=&quot;exitLogin.jsp&quot; method=&quot;post&quot;&gt;</span><br><span class="line">			&lt;button type=&quot;submit&quot;&gt;退出&lt;/button&gt;</span><br><span class="line">		&lt;/form&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
+<p>最后是退出jsp<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;%</span><br><span class="line">		//session.setAttribute(&quot;isLogin&quot;,null);</span><br><span class="line">   		session.removeAttribute(&quot;isLogin&quot;);</span><br><span class="line">   		response.sendRedirect(&quot;login.jsp&quot;);</span><br><span class="line">    %&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
+<p>理论上这样写是可以的，但最终出现非常奇怪的问题，就是第一次登录是没有问题的，但home.jsp点击退出回到login.jsp之后，我直接进入home.jsp，按理是不能进入home的，因为我退出移除了session的”isLogin”属性值，但结果是可以进入home.jsp。<br>这很奇怪，我不知道我存在什么问题，这让我烦恼了半天，我在login.jsp中将session的”isLogin”输出，发现这个session的”isLogin”属性值显示是为null，但点击刷新之后这个session的”isLogin”值为true，然后在home.jsp中发现也是true，为什么会出现这种情况呢？刚开始我猜想是不是没有成功移除，我尝试了session.setAttribute(“isLogin”,null);、session.removeAttribute(“isLogin”);和session.invalidate();</p>
+<h4 id="最后我的解决方法是：去除login-jsp中的-lt-session-setAttribute-“isLogin”-“true”-gt-代码，进入StudentLoginServlet中里面写为：request-getSession-setAttribute-“isLogin”-“true”"><a href="#最后我的解决方法是：去除login-jsp中的-lt-session-setAttribute-“isLogin”-“true”-gt-代码，进入StudentLoginServlet中里面写为：request-getSession-setAttribute-“isLogin”-“true”" class="headerlink" title="最后我的解决方法是：去除login.jsp中的&lt;% session().setAttribute(“isLogin”, “true”); %&gt;代码，进入StudentLoginServlet中里面写为：request.getSession().setAttribute(“isLogin”, “true”);"></a>最后我的解决方法是：去除login.jsp中的<font color="red">&lt;% session().setAttribute(“isLogin”, “true”); %&gt;</font>代码，进入StudentLoginServlet中里面写为：<font color="red">request.getSession().setAttribute(“isLogin”, “true”);</font></h4><p>这样，点击退出之后，session的”isLogin”为null，再刷新也是null，问题终于得到解决。</p>
 
       
     </div>
@@ -323,13 +326,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/04/04/vscode调试vue项目/">vscode调试vue项目</a></p>
+        <p><span>本文标题:</span><a href="/2019/06/08/使用session控制web登录退出/">使用session控制web登录退出</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Zhou Hang</a></p>
-        <p><span>发布时间:</span>2019-04-04, 15:32:59</p>
-        <p><span>最后更新:</span>2019-04-19, 14:12:21</p>
+        <p><span>发布时间:</span>2019-06-08, 22:29:00</p>
+        <p><span>最后更新:</span>2019-06-08, 23:04:04</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/04/04/vscode调试vue项目/" title="vscode调试vue项目">http://zhouhangzooo.github.io/2019/04/04/vscode调试vue项目/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://zhouhangzooo.github.io/2019/04/04/vscode调试vue项目/　　作者: Zhou Hang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/06/08/使用session控制web登录退出/" title="使用session控制web登录退出">http://zhouhangzooo.github.io/2019/06/08/使用session控制web登录退出/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://zhouhangzooo.github.io/2019/06/08/使用session控制web登录退出/　　作者: Zhou Hang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -341,16 +344,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/04/05/github提交没有贡献解决方案/">
-                    github提交没有贡献解决方案
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/04/03/vscode插件与webview相互通信/">
-                    vscode插件与webview相互通信
+                <a href="/2019/05/27/sql级联更新和级联删除/">
+                    sql级联更新和级联删除
                 </a>
             </div>
         
@@ -362,7 +359,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Debugger-for-Chrome插件"><span class="toc-number">1.</span> <span class="toc-text">安装Debugger for Chrome插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置chrome到launch-json中"><span class="toc-number">2.</span> <span class="toc-text">配置chrome到launch.json中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在终端运行命令npm-run-dev"><span class="toc-number">3.</span> <span class="toc-text">在终端运行命令npm run dev</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#断点调试"><span class="toc-number">4.</span> <span class="toc-text">断点调试</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#今天给大家说一个session的问题，首先是session的使用方法："><span class="toc-number">1.</span> <span class="toc-text">今天给大家说一个session的问题，首先是session的使用方法：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#使用"><span class="toc-number">1.0.1.</span> <span class="toc-text">使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#获取-逻辑判断"><span class="toc-number">1.0.2.</span> <span class="toc-text">获取/逻辑判断</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#移除"><span class="toc-number">1.0.3.</span> <span class="toc-text">移除</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#最后我的解决方法是：去除login-jsp中的-lt-session-setAttribute-“isLogin”-“true”-gt-代码，进入StudentLoginServlet中里面写为：request-getSession-setAttribute-“isLogin”-“true”"><span class="toc-number">1.0.4.</span> <span class="toc-text">最后我的解决方法是：去除login.jsp中的&lt;% session().setAttribute(“isLogin”, “true”); %&gt;代码，进入StudentLoginServlet中里面写为：request.getSession().setAttribute(“isLogin”, “true”);</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -398,7 +395,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"vscode调试vue项目　| Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"使用session控制web登录退出　| Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -435,15 +432,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/04/05/github提交没有贡献解决方案/" title="上一篇: github提交没有贡献解决方案">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/04/03/vscode插件与webview相互通信/" title="下一篇: vscode插件与webview相互通信">
+            <a href="/2019/05/27/sql级联更新和级联删除/" title="下一篇: sql级联更新和级联删除">
                 <i class="fa fa-angle-right"></i>
             </a>
         
