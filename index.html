@@ -271,6 +271,68 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-通过css实现按钮高亮" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/07/01/通过css实现按钮高亮/" class="article-date">
+      <time datetime="2019-07-01T06:26:53.000Z" itemprop="datePublished">2019-07-01</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/01/通过css实现按钮高亮/">通过css实现按钮高亮</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>本文通过改变css来实现按钮高亮效果<br>其实高亮只需增加一行代码，如下：<br>原css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.monaco-workbench &gt; .part.titlebar &gt; .window-controls-container .window-minlogin &#123;</span><br><span class="line">	height:100%;</span><br><span class="line">	width:45px;</span><br><span class="line">	background-color:#1E1E1E;</span><br><span class="line">	padding-right: -10px;</span><br><span class="line">	margin-right: 20px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>可以看到这个颜色是1E1E1E（灰色），然后增加一行代码即可，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.monaco-workbench &gt; .part.titlebar &gt; .window-controls-container .window-minlogin:hover &#123;</span><br><span class="line">	background-color:#68217A;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>效果<br><img src="css.jpg" alt></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-JS文件相互调用" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -825,73 +887,6 @@
       
         <p class="article-more-link">
           <a href="/2019/05/02/JDBC基础使用/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-部署jsp到虚拟机服务器上" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/04/30/部署jsp到虚拟机服务器上/" class="article-date">
-      <time datetime="2019-04-30T13:59:14.000Z" itemprop="datePublished">2019-04-30</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/30/部署jsp到虚拟机服务器上/">部署jsp项目到虚拟机服务器上</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>记录如何部署jsp项目到远程虚拟机或者服务器上</p>
-<h4 id="准备工具："><a href="#准备工具：" class="headerlink" title="准备工具："></a>准备工具：</h4><p>Xshell6、Xftp6、VMware Workstation</p>
-<h4 id="准备工作："><a href="#准备工作：" class="headerlink" title="准备工作："></a>准备工作：</h4><p>需要在VMware Workstation中建立你的虚拟机（相当于服务器），并且开启虚拟机；<br>Xshell中建立会话（配置主机和用户名密码）</p>
-<h4 id="上传jsp项目："><a href="#上传jsp项目：" class="headerlink" title="上传jsp项目："></a>上传jsp项目：</h4>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jsp/">jsp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2019/04/30/部署jsp到虚拟机服务器上/#more">阅读全文 >></a>
         </p>
       
       <div class="clearfix"></div>
