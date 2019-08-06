@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="本文记录简单使用JDBC的教程 准备工具：eclipse、mysql mysql建数据库和数据表1234567891011121314//创建数据库ZHOUHANGcreate database ZHOUHANG;//使用数据库use ZHOUHANG;//创建数据表create table `zhou`(`id` int unsigned auto_increment,	`name` varch">
-<meta name="keywords" content="Java,JDBC">
+<meta name="description" content="很多时候，我们通过网络请求返回后台数据之后，需要在前端页面中显示，通常有一些嵌套多个数组的数据，我们称之为‘树形结构’数据，而我们通常碰到搜索题目id查找对应的数据，又或者我们打开了一个题目，需要点击下一题的时候，我们往往需要通过id去获取题目这个对象；下面array其实就是多个题目对象组成，我们直接上代码； 12345678910111213141516171819202122232425262">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JDBC基础使用">
-<meta property="og:url" content="http://zhouhangzooo.github.io/2019/05/02/JDBC基础使用/index.html">
+<meta property="og:title" content="递归查找">
+<meta property="og:url" content="http://zhouhangzooo.github.io/2019/08/06/递归查找/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="本文记录简单使用JDBC的教程 准备工具：eclipse、mysql mysql建数据库和数据表1234567891011121314//创建数据库ZHOUHANGcreate database ZHOUHANG;//使用数据库use ZHOUHANG;//创建数据表create table `zhou`(`id` int unsigned auto_increment,	`name` varch">
+<meta property="og:description" content="很多时候，我们通过网络请求返回后台数据之后，需要在前端页面中显示，通常有一些嵌套多个数组的数据，我们称之为‘树形结构’数据，而我们通常碰到搜索题目id查找对应的数据，又或者我们打开了一个题目，需要点击下一题的时候，我们往往需要通过id去获取题目这个对象；下面array其实就是多个题目对象组成，我们直接上代码； 12345678910111213141516171819202122232425262">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-02T15:19:36.241Z">
+<meta property="og:updated_time" content="2019-08-06T09:54:01.100Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JDBC基础使用">
-<meta name="twitter:description" content="本文记录简单使用JDBC的教程 准备工具：eclipse、mysql mysql建数据库和数据表1234567891011121314//创建数据库ZHOUHANGcreate database ZHOUHANG;//使用数据库use ZHOUHANG;//创建数据表create table `zhou`(`id` int unsigned auto_increment,	`name` varch">
+<meta name="twitter:title" content="递归查找">
+<meta name="twitter:description" content="很多时候，我们通过网络请求返回后台数据之后，需要在前端页面中显示，通常有一些嵌套多个数组的数据，我们称之为‘树形结构’数据，而我们通常碰到搜索题目id查找对应的数据，又或者我们打开了一个题目，需要点击下一题的时候，我们往往需要通过id去获取题目这个对象；下面array其实就是多个题目对象组成，我们直接上代码； 12345678910111213141516171819202122232425262">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>JDBC基础使用 | Blog</title>
+<title>递归查找 | Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -271,11 +271,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-JDBC基础使用" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-递归查找" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/05/02/JDBC基础使用/" class="article-date">
-      <time datetime="2019-05-02T12:09:21.000Z" itemprop="datePublished">2019-05-02</time>
+      <a href="/2019/08/06/递归查找/" class="article-date">
+      <time datetime="2019-08-06T09:50:39.000Z" itemprop="datePublished">2019-08-06</time>
 </a>
 
 
@@ -290,7 +290,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      JDBC基础使用
+      递归查找
     </h1>
   
 
@@ -301,7 +301,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JDBC/">JDBC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -311,13 +311,47 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>本文记录简单使用JDBC的教程</p>
-<h2 id="准备工具："><a href="#准备工具：" class="headerlink" title="准备工具："></a>准备工具：</h2><p>eclipse、mysql</p>
-<h2 id="mysql建数据库和数据表"><a href="#mysql建数据库和数据表" class="headerlink" title="mysql建数据库和数据表"></a>mysql建数据库和数据表</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//创建数据库ZHOUHANG</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> ZHOUHANG;</span><br><span class="line"></span><br><span class="line">//使用数据库</span><br><span class="line"><span class="keyword">use</span> ZHOUHANG;</span><br><span class="line"></span><br><span class="line">//创建数据表</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="string">`zhou`</span>(<span class="string">`id`</span> <span class="built_in">int</span> <span class="keyword">unsigned</span> auto_increment,</span><br><span class="line">	<span class="string">`name`</span> <span class="built_in">varchar</span>(<span class="number">100</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    primary <span class="keyword">key</span> (<span class="string">`id`</span>)</span><br><span class="line">    )<span class="keyword">engine</span>=<span class="keyword">innodb</span> <span class="keyword">default</span> <span class="keyword">charset</span>=utf8;</span><br><span class="line"></span><br><span class="line">//插入几条数据</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> zhou <span class="keyword">values</span> (<span class="number">0</span>,<span class="string">"java"</span>),(<span class="number">0</span>,<span class="string">"android"</span>),(<span class="number">0</span>,<span class="string">"小程序"</span>);</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h2 id="java调用JDBC代码如下："><a href="#java调用JDBC代码如下：" class="headerlink" title="java调用JDBC代码如下："></a>java调用JDBC代码如下：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.sql.Connection;</span><br><span class="line"><span class="keyword">import</span> java.sql.DriverManager;</span><br><span class="line"><span class="keyword">import</span> java.sql.ResultSet;</span><br><span class="line"><span class="keyword">import</span> java.sql.Statement;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DbUtil</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String URL = <span class="string">"jdbc:mysql://localhost:3306/ZHOUHANG?serverTimezone=UTC"</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String USER = <span class="string">"root"</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String PASSWORD = <span class="string">"123456"</span>; <span class="comment">//改为你本地数据库的密码</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="comment">//1.加载驱动程序</span></span><br><span class="line">        Class.forName(<span class="string">"com.mysql.cj.jdbc.Driver"</span>); <span class="comment">//如果你的数据库版本小于8.0.15，那么改成com.mysql.jdbc.Driver</span></span><br><span class="line">        <span class="comment">//2. 获得数据库连接</span></span><br><span class="line">        Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);</span><br><span class="line">        <span class="comment">//3.操作数据库，实现增删改查</span></span><br><span class="line">        Statement stmt = conn.createStatement();</span><br><span class="line">        ResultSet rs = stmt.executeQuery(<span class="string">"SELECT id, name FROM zhou"</span>);</span><br><span class="line">        <span class="comment">//如果有数据，rs.next()返回true</span></span><br><span class="line">        <span class="keyword">while</span>(rs.next())&#123;</span><br><span class="line">            System.out.println(rs.getString(<span class="string">"name"</span>)+<span class="string">" ID："</span>+rs.getInt(<span class="string">"id"</span>));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="导包"><a href="#导包" class="headerlink" title="导包"></a>导包</h2><p>因为不是maven项目所以需要手动导包，所以需要在项目lib中加入mysql-connector-java-8.0.15.jar，然后build path中的add即可；<br>不然会报错：找不到”com.mysql.cj.jdbc.Driver”这个类。</p>
-<h2 id="最终输出结果："><a href="#最终输出结果：" class="headerlink" title="最终输出结果："></a>最终输出结果：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java ID：1</span><br><span class="line">android ID：2</span><br><span class="line">小程序 ID：3</span><br></pre></td></tr></table></figure>
+        <p>很多时候，我们通过网络请求返回后台数据之后，需要在前端页面中显示，通常有一些嵌套多个数组的数据，我们称之为‘树形结构’数据，<br>而我们通常碰到搜索题目id查找对应的数据，又或者我们打开了一个题目，需要点击下一题的时候，我们往往需要通过id去获取题目这个对象；<br>下面array其实就是多个题目对象组成，我们直接上代码；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">var array = [</span><br><span class="line">            &#123;</span><br><span class="line">                id: 1,</span><br><span class="line">				title:&quot;a&quot;,</span><br><span class="line">                children:[&#123;</span><br><span class="line">                        id:2,</span><br><span class="line">                        children:[]</span><br><span class="line">                    &#125;]</span><br><span class="line">            &#125;,</span><br><span class="line"></span><br><span class="line">            &#123;</span><br><span class="line">                id:3,</span><br><span class="line">				title:&quot;b&quot;,</span><br><span class="line">                children:[]</span><br><span class="line">            &#125;,</span><br><span class="line"></span><br><span class="line">            &#123;</span><br><span class="line">                id:4,</span><br><span class="line">				title:&quot;c&quot;,</span><br><span class="line">                children:[</span><br><span class="line">                    &#123;</span><br><span class="line">                        id:5,</span><br><span class="line">						title:&quot;c1&quot;,</span><br><span class="line">                        children:[</span><br><span class="line">                            &#123;</span><br><span class="line">                                id:6,</span><br><span class="line">								title:&quot;c2&quot;,</span><br><span class="line">                                children:[]</span><br><span class="line">                            &#125;,</span><br><span class="line"></span><br><span class="line">                            &#123;</span><br><span class="line">                                id:7,</span><br><span class="line">								title:&quot;c3&quot;,</span><br><span class="line">                                children:[]</span><br><span class="line">                            &#125;</span><br><span class="line">                        ]</span><br><span class="line">                    &#125;</span><br><span class="line">                ]</span><br><span class="line">            &#125;</span><br><span class="line">        ];</span><br></pre></td></tr></table></figure>
+<p>方法一：<br>    var returnedItem;</p>
+<pre><code>var find = function(arr, id){
+    arr.forEach((item) =&gt; { 
+         if(item.id==id)
+         {        
+             returnedItem = item;
+             return item;
+         }
+         else if(item.children.length &gt; 0)
+         {
+             find(item.children, id);                        
+         }                   
+    })
+}
+
+var item = find(array, 7);
+console.log(returnedItem);
+</code></pre><p>方法二：</p>
+<pre><code>var returnedItem;
+
+    var find = function(arr, id){
+        for (var a = 0; a &lt; arr.length; a++) {
+            if(arr[a].id == id)
+             {
+                 returnedItem = arr[a];
+                 return item;
+             }
+             else if(arr[a].children != undefined &amp;&amp; arr[a].children.length &gt; 0)
+             {
+                 find(arr[a].children, id);
+             }else {
+             }
+        }
+    }
+
+    var item = find(array, 7);
+    console.log(returnedItem);
+</code></pre><p>其中7为你输入的id，得到的是id为7的对象；returnedItem.id和returnedItem.title就是我们想要的数据；</p>
+
       
     </div>
     
@@ -325,13 +359,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/05/02/JDBC基础使用/">JDBC基础使用</a></p>
+        <p><span>本文标题:</span><a href="/2019/08/06/递归查找/">递归查找</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Zhou Hang</a></p>
-        <p><span>发布时间:</span>2019-05-02, 20:09:21</p>
-        <p><span>最后更新:</span>2019-05-02, 23:19:36</p>
+        <p><span>发布时间:</span>2019-08-06, 17:50:39</p>
+        <p><span>最后更新:</span>2019-08-06, 17:54:01</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/05/02/JDBC基础使用/" title="JDBC基础使用">http://zhouhangzooo.github.io/2019/05/02/JDBC基础使用/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://zhouhangzooo.github.io/2019/05/02/JDBC基础使用/　　作者: Zhou Hang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/08/06/递归查找/" title="递归查找">http://zhouhangzooo.github.io/2019/08/06/递归查找/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://zhouhangzooo.github.io/2019/08/06/递归查找/　　作者: Zhou Hang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -343,16 +377,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/05/09/jspHttp请求实例/">
-                    JSP中Http请求实例
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/04/30/部署jsp到虚拟机服务器上/">
-                    部署jsp项目到虚拟机服务器上
+                <a href="/2019/07/19/html标签通过代码隐藏和显示/">
+                    html标签通过代码隐藏和显示
                 </a>
             </div>
         
@@ -364,7 +392,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备工具："><span class="toc-number">1.</span> <span class="toc-text">准备工具：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mysql建数据库和数据表"><span class="toc-number">2.</span> <span class="toc-text">mysql建数据库和数据表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java调用JDBC代码如下："><span class="toc-number">3.</span> <span class="toc-text">java调用JDBC代码如下：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#导包"><span class="toc-number">4.</span> <span class="toc-text">导包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最终输出结果："><span class="toc-number">5.</span> <span class="toc-text">最终输出结果：</span></a></li></ol>
+            
         
     </div>
     <style>
@@ -400,7 +428,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"JDBC基础使用　| Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"递归查找　| Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -437,15 +465,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/05/09/jspHttp请求实例/" title="上一篇: JSP中Http请求实例">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/04/30/部署jsp到虚拟机服务器上/" title="下一篇: 部署jsp项目到虚拟机服务器上">
+            <a href="/2019/07/19/html标签通过代码隐藏和显示/" title="下一篇: html标签通过代码隐藏和显示">
                 <i class="fa fa-angle-right"></i>
             </a>
         
