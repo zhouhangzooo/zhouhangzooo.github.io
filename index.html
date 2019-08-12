@@ -271,6 +271,68 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-vscode通过插件修改编辑器的内容" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/08/12/vscode通过插件修改编辑器的内容/" class="article-date">
+      <time datetime="2019-08-12T09:13:29.000Z" itemprop="datePublished">2019-08-12</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/12/vscode通过插件修改编辑器的内容/">vscode通过插件修改编辑器的内容</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>之前碰到一个需求是这样的：在vsocde编译器中检验用户输入的代码，如果出现中文字符，那么将其替换成相应的英文字符。<br>好了，进下来直接上代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const fs_1 = require(&quot;fs&quot;);</span><br><span class="line">//读取文件内容，filePath为文件的路径，如：C:\aaa\bbb\ccc.cpp</span><br><span class="line">var oldFileData = fs_1.readFileSync(filePath) + &apos;&apos;;</span><br><span class="line">//然后对齐进行替换</span><br><span class="line">var newFileData = oldFileData.replace(/\’|\‘/g,&quot;&apos;&quot;).replace(/\“|\”/g,&quot;\&quot;&quot;).replace(/，/g,&quot;,&quot;).replace(/：/g,&quot;:&quot;)</span><br><span class="line">            .replace(/。/g,&quot;.&quot;).replace(/；/g,&quot;;&quot;).replace(/\【/g,&quot;[&quot;).replace(/\】/g,&quot;]&quot;).replace(/\｛/g,&quot;&#123;&quot;).replace(/\｝/g,&quot;&#125;&quot;);</span><br><span class="line">//然后写入文件(此方法有问题)</span><br><span class="line">//fs_1.writeFileSync(filePath, newFileData);</span><br></pre></td></tr></table></figure></p>
+<p>读取cpp文件也就是编辑器的代码，对其进行校验，替换字符，然后再将新的字符写入cpp文件，但是测试会出现问题，时常没法保存vscod编辑器的代码，经过反复测试我发现：<br>我将cpp文件的内容进行写入之后，磁盘的cpp文件的内容更换，但编辑器没有即时生效，如果这时保存的话会提示当前文件出现冲突，需要手动保存时无法保存，原因是编辑器没有即时生效，<br>所以我采取一种新的方法：就是不再新的内容写入cpp文件了，而是写入编辑器中，至此编辑器无冲突也可保存；<br>正确代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const fs_1 = require(&quot;fs&quot;);</span><br><span class="line">const vscode_1 = require(&quot;vscode&quot;);</span><br><span class="line">//读取文件内容，filePath为文件的路径，如：C:\aaa\bbb\ccc.cpp</span><br><span class="line">var oldFileData = fs_1.readFileSync(filePath) + &apos;&apos;;</span><br><span class="line">//然后对齐进行替换</span><br><span class="line">var newFileData = oldFileData.replace(/\’|\‘/g,&quot;&apos;&quot;).replace(/\“|\”/g,&quot;\&quot;&quot;).replace(/，/g,&quot;,&quot;).replace(/：/g,&quot;:&quot;)</span><br><span class="line">            .replace(/。/g,&quot;.&quot;).replace(/；/g,&quot;;&quot;).replace(/\【/g,&quot;[&quot;).replace(/\】/g,&quot;]&quot;).replace(/\｛/g,&quot;&#123;&quot;).replace(/\｝/g,&quot;&#125;&quot;);</span><br><span class="line">//核心代码</span><br><span class="line">vscode_1.window.activeTextEditor.edit(editBuilder =&gt; &#123;</span><br><span class="line">    // 从开始到结束，全量替换</span><br><span class="line">    const end = new vscode_1.Position(vscode_1.window.activeTextEditor.document.lineCount + 1, 0);</span><br><span class="line">    editBuilder.replace(new vscode_1.Range(new vscode_1.Position(0, 0), end), newFileData);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>其实不管你的需求是什么，本文想要讲述的是这段核心代码，也就是通过这段代码将vscode编辑器的内容进行替换。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VsCode/">VsCode</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-递归查找" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -858,72 +920,6 @@ console.log(returnedItem);
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
     </div>
 
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-vscode二次开发界面篇" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/05/13/vscode二次开发界面篇/" class="article-date">
-      <time datetime="2019-05-13T02:17:19.000Z" itemprop="datePublished">2019-05-13</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/13/vscode二次开发界面篇/">vscode二次开发界面篇</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h2 id="本文给大家介绍vscode的界面的自定义修改"><a href="#本文给大家介绍vscode的界面的自定义修改" class="headerlink" title="本文给大家介绍vscode的界面的自定义修改"></a>本文给大家介绍vscode的界面的自定义修改</h2><p>首先，先看vsocde界面如图1：</p>
-<p><img src="vscode1.png" alt="图1"></p>
-<p>界面大致可以分为六部分：<br>1.标题栏titlebar 包含其中左边的（包括文件~帮助）为菜单栏menubar<br>2.活动栏activitybar<br>3.侧边栏sidebar<br>4.编辑器editor<br>5.终端及输出等panel<br>6.状态栏statusbar<br>通过分类我们已经清楚了每个部分，接下来我们就动手尝试吧！<br>
-          
-      
-    </p></div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VsCode/">VsCode</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2019/05/13/vscode二次开发界面篇/#more">阅读全文 >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>

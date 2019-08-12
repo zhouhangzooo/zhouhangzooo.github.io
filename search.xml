@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>vscode通过插件修改编辑器的内容</title>
+      <link href="/2019/08/12/vscode%E9%80%9A%E8%BF%87%E6%8F%92%E4%BB%B6%E4%BF%AE%E6%94%B9%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%86%85%E5%AE%B9/"/>
+      <url>/2019/08/12/vscode%E9%80%9A%E8%BF%87%E6%8F%92%E4%BB%B6%E4%BF%AE%E6%94%B9%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%86%85%E5%AE%B9/</url>
+      
+        <content type="html"><![CDATA[<p>之前碰到一个需求是这样的：在vsocde编译器中检验用户输入的代码，如果出现中文字符，那么将其替换成相应的英文字符。<br>好了，进下来直接上代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const fs_1 = require(&quot;fs&quot;);</span><br><span class="line">//读取文件内容，filePath为文件的路径，如：C:\aaa\bbb\ccc.cpp</span><br><span class="line">var oldFileData = fs_1.readFileSync(filePath) + &apos;&apos;;</span><br><span class="line">//然后对齐进行替换</span><br><span class="line">var newFileData = oldFileData.replace(/\’|\‘/g,&quot;&apos;&quot;).replace(/\“|\”/g,&quot;\&quot;&quot;).replace(/，/g,&quot;,&quot;).replace(/：/g,&quot;:&quot;)</span><br><span class="line">            .replace(/。/g,&quot;.&quot;).replace(/；/g,&quot;;&quot;).replace(/\【/g,&quot;[&quot;).replace(/\】/g,&quot;]&quot;).replace(/\｛/g,&quot;&#123;&quot;).replace(/\｝/g,&quot;&#125;&quot;);</span><br><span class="line">//然后写入文件(此方法有问题)</span><br><span class="line">//fs_1.writeFileSync(filePath, newFileData);</span><br></pre></td></tr></table></figure></p><p>读取cpp文件也就是编辑器的代码，对其进行校验，替换字符，然后再将新的字符写入cpp文件，但是测试会出现问题，时常没法保存vscod编辑器的代码，经过反复测试我发现：<br>我将cpp文件的内容进行写入之后，磁盘的cpp文件的内容更换，但编辑器没有即时生效，如果这时保存的话会提示当前文件出现冲突，需要手动保存时无法保存，原因是编辑器没有即时生效，<br>所以我采取一种新的方法：就是不再新的内容写入cpp文件了，而是写入编辑器中，至此编辑器无冲突也可保存；<br>正确代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const fs_1 = require(&quot;fs&quot;);</span><br><span class="line">const vscode_1 = require(&quot;vscode&quot;);</span><br><span class="line">//读取文件内容，filePath为文件的路径，如：C:\aaa\bbb\ccc.cpp</span><br><span class="line">var oldFileData = fs_1.readFileSync(filePath) + &apos;&apos;;</span><br><span class="line">//然后对齐进行替换</span><br><span class="line">var newFileData = oldFileData.replace(/\’|\‘/g,&quot;&apos;&quot;).replace(/\“|\”/g,&quot;\&quot;&quot;).replace(/，/g,&quot;,&quot;).replace(/：/g,&quot;:&quot;)</span><br><span class="line">            .replace(/。/g,&quot;.&quot;).replace(/；/g,&quot;;&quot;).replace(/\【/g,&quot;[&quot;).replace(/\】/g,&quot;]&quot;).replace(/\｛/g,&quot;&#123;&quot;).replace(/\｝/g,&quot;&#125;&quot;);</span><br><span class="line">//核心代码</span><br><span class="line">vscode_1.window.activeTextEditor.edit(editBuilder =&gt; &#123;</span><br><span class="line">    // 从开始到结束，全量替换</span><br><span class="line">    const end = new vscode_1.Position(vscode_1.window.activeTextEditor.document.lineCount + 1, 0);</span><br><span class="line">    editBuilder.replace(new vscode_1.Range(new vscode_1.Position(0, 0), end), newFileData);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p><p>其实不管你的需求是什么，本文想要讲述的是这段核心代码，也就是通过这段代码将vscode编辑器的内容进行替换。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> VsCode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>递归查找</title>
       <link href="/2019/08/06/%E9%80%92%E5%BD%92%E6%9F%A5%E6%89%BE/"/>
       <url>/2019/08/06/%E9%80%92%E5%BD%92%E6%9F%A5%E6%89%BE/</url>

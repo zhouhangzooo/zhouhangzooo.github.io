@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="清明时节雨无声，编程路上继续行。 前几天在github提交代码，发现没有显示贡献，于是查找原因顺便记录一下：原因可能是提交时的邮箱和github账号的邮箱不一致。 检查自己的emal是否正确git config –global user.email 回车 设置邮箱名和名字git config –global user.name “你的名字”git config –global user.email">
-<meta name="keywords" content="git">
+<meta name="description" content="之前碰到一个需求是这样的：在vsocde编译器中检验用户输入的代码，如果出现中文字符，那么将其替换成相应的英文字符。好了，进下来直接上代码：12345678const fs_1 = require(&amp;quot;fs&amp;quot;);//读取文件内容，filePath为文件的路径，如：C:\aaa\bbb\ccc.cppvar oldFileData = fs_1.readFileSync(fileP">
+<meta name="keywords" content="VsCode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="github提交没有贡献解决方案">
-<meta property="og:url" content="http://zhouhangzooo.github.io/2019/04/05/github提交没有贡献解决方案/index.html">
+<meta property="og:title" content="vscode通过插件修改编辑器的内容">
+<meta property="og:url" content="http://zhouhangzooo.github.io/2019/08/12/vscode通过插件修改编辑器的内容/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="清明时节雨无声，编程路上继续行。 前几天在github提交代码，发现没有显示贡献，于是查找原因顺便记录一下：原因可能是提交时的邮箱和github账号的邮箱不一致。 检查自己的emal是否正确git config –global user.email 回车 设置邮箱名和名字git config –global user.name “你的名字”git config –global user.email">
+<meta property="og:description" content="之前碰到一个需求是这样的：在vsocde编译器中检验用户输入的代码，如果出现中文字符，那么将其替换成相应的英文字符。好了，进下来直接上代码：12345678const fs_1 = require(&amp;quot;fs&amp;quot;);//读取文件内容，filePath为文件的路径，如：C:\aaa\bbb\ccc.cppvar oldFileData = fs_1.readFileSync(fileP">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-19T06:10:41.546Z">
+<meta property="og:updated_time" content="2019-08-12T09:34:23.724Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="github提交没有贡献解决方案">
-<meta name="twitter:description" content="清明时节雨无声，编程路上继续行。 前几天在github提交代码，发现没有显示贡献，于是查找原因顺便记录一下：原因可能是提交时的邮箱和github账号的邮箱不一致。 检查自己的emal是否正确git config –global user.email 回车 设置邮箱名和名字git config –global user.name “你的名字”git config –global user.email">
+<meta name="twitter:title" content="vscode通过插件修改编辑器的内容">
+<meta name="twitter:description" content="之前碰到一个需求是这样的：在vsocde编译器中检验用户输入的代码，如果出现中文字符，那么将其替换成相应的英文字符。好了，进下来直接上代码：12345678const fs_1 = require(&amp;quot;fs&amp;quot;);//读取文件内容，filePath为文件的路径，如：C:\aaa\bbb\ccc.cppvar oldFileData = fs_1.readFileSync(fileP">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>github提交没有贡献解决方案 | Blog</title>
+<title>vscode通过插件修改编辑器的内容 | Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -271,11 +271,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-github提交没有贡献解决方案" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-vscode通过插件修改编辑器的内容" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/04/05/github提交没有贡献解决方案/" class="article-date">
-      <time datetime="2019-04-05T02:25:37.000Z" itemprop="datePublished">2019-04-05</time>
+      <a href="/2019/08/12/vscode通过插件修改编辑器的内容/" class="article-date">
+      <time datetime="2019-08-12T09:13:29.000Z" itemprop="datePublished">2019-08-12</time>
 </a>
 
 
@@ -290,7 +290,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      github提交没有贡献解决方案
+      vscode通过插件修改编辑器的内容
     </h1>
   
 
@@ -301,7 +301,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VsCode/">VsCode</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -311,10 +311,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><code>清明时节雨无声，编程路上继续行。</code></p>
-<p>前几天在github提交代码，发现没有显示贡献，于是查找原因顺便记录一下：原因可能是提交时的邮箱和github账号的邮箱不一致。</p>
-<h2 id="检查自己的emal是否正确"><a href="#检查自己的emal是否正确" class="headerlink" title="检查自己的emal是否正确"></a>检查自己的emal是否正确</h2><p>git config –global user.email 回车</p>
-<h2 id="设置邮箱名和名字"><a href="#设置邮箱名和名字" class="headerlink" title="设置邮箱名和名字"></a>设置邮箱名和名字</h2><p>git config –global user.name “你的名字”<br>git config –global user.email “你的邮箱” 如<a href="mailto:XXXX@163.com" target="_blank" rel="noopener">XXXX@163.com</a><br>`</p>
+        <p>之前碰到一个需求是这样的：在vsocde编译器中检验用户输入的代码，如果出现中文字符，那么将其替换成相应的英文字符。<br>好了，进下来直接上代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const fs_1 = require(&quot;fs&quot;);</span><br><span class="line">//读取文件内容，filePath为文件的路径，如：C:\aaa\bbb\ccc.cpp</span><br><span class="line">var oldFileData = fs_1.readFileSync(filePath) + &apos;&apos;;</span><br><span class="line">//然后对齐进行替换</span><br><span class="line">var newFileData = oldFileData.replace(/\’|\‘/g,&quot;&apos;&quot;).replace(/\“|\”/g,&quot;\&quot;&quot;).replace(/，/g,&quot;,&quot;).replace(/：/g,&quot;:&quot;)</span><br><span class="line">            .replace(/。/g,&quot;.&quot;).replace(/；/g,&quot;;&quot;).replace(/\【/g,&quot;[&quot;).replace(/\】/g,&quot;]&quot;).replace(/\｛/g,&quot;&#123;&quot;).replace(/\｝/g,&quot;&#125;&quot;);</span><br><span class="line">//然后写入文件(此方法有问题)</span><br><span class="line">//fs_1.writeFileSync(filePath, newFileData);</span><br></pre></td></tr></table></figure></p>
+<p>读取cpp文件也就是编辑器的代码，对其进行校验，替换字符，然后再将新的字符写入cpp文件，但是测试会出现问题，时常没法保存vscod编辑器的代码，经过反复测试我发现：<br>我将cpp文件的内容进行写入之后，磁盘的cpp文件的内容更换，但编辑器没有即时生效，如果这时保存的话会提示当前文件出现冲突，需要手动保存时无法保存，原因是编辑器没有即时生效，<br>所以我采取一种新的方法：就是不再新的内容写入cpp文件了，而是写入编辑器中，至此编辑器无冲突也可保存；<br>正确代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const fs_1 = require(&quot;fs&quot;);</span><br><span class="line">const vscode_1 = require(&quot;vscode&quot;);</span><br><span class="line">//读取文件内容，filePath为文件的路径，如：C:\aaa\bbb\ccc.cpp</span><br><span class="line">var oldFileData = fs_1.readFileSync(filePath) + &apos;&apos;;</span><br><span class="line">//然后对齐进行替换</span><br><span class="line">var newFileData = oldFileData.replace(/\’|\‘/g,&quot;&apos;&quot;).replace(/\“|\”/g,&quot;\&quot;&quot;).replace(/，/g,&quot;,&quot;).replace(/：/g,&quot;:&quot;)</span><br><span class="line">            .replace(/。/g,&quot;.&quot;).replace(/；/g,&quot;;&quot;).replace(/\【/g,&quot;[&quot;).replace(/\】/g,&quot;]&quot;).replace(/\｛/g,&quot;&#123;&quot;).replace(/\｝/g,&quot;&#125;&quot;);</span><br><span class="line">//核心代码</span><br><span class="line">vscode_1.window.activeTextEditor.edit(editBuilder =&gt; &#123;</span><br><span class="line">    // 从开始到结束，全量替换</span><br><span class="line">    const end = new vscode_1.Position(vscode_1.window.activeTextEditor.document.lineCount + 1, 0);</span><br><span class="line">    editBuilder.replace(new vscode_1.Range(new vscode_1.Position(0, 0), end), newFileData);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>其实不管你的需求是什么，本文想要讲述的是这段核心代码，也就是通过这段代码将vscode编辑器的内容进行替换。</p>
 
       
     </div>
@@ -323,13 +322,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/04/05/github提交没有贡献解决方案/">github提交没有贡献解决方案</a></p>
+        <p><span>本文标题:</span><a href="/2019/08/12/vscode通过插件修改编辑器的内容/">vscode通过插件修改编辑器的内容</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Zhou Hang</a></p>
-        <p><span>发布时间:</span>2019-04-05, 10:25:37</p>
-        <p><span>最后更新:</span>2019-04-19, 14:10:41</p>
+        <p><span>发布时间:</span>2019-08-12, 17:13:29</p>
+        <p><span>最后更新:</span>2019-08-12, 17:34:23</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/04/05/github提交没有贡献解决方案/" title="github提交没有贡献解决方案">http://zhouhangzooo.github.io/2019/04/05/github提交没有贡献解决方案/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://zhouhangzooo.github.io/2019/04/05/github提交没有贡献解决方案/　　作者: Zhou Hang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/08/12/vscode通过插件修改编辑器的内容/" title="vscode通过插件修改编辑器的内容">http://zhouhangzooo.github.io/2019/08/12/vscode通过插件修改编辑器的内容/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://zhouhangzooo.github.io/2019/08/12/vscode通过插件修改编辑器的内容/　　作者: Zhou Hang" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -341,16 +340,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2019/04/06/git最实用命令/">
-                    git最实用命令总结
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/04/04/vscode调试vue项目/">
-                    vscode调试vue项目
+                <a href="/2019/08/06/递归查找/">
+                    递归查找
                 </a>
             </div>
         
@@ -362,7 +355,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#检查自己的emal是否正确"><span class="toc-number">1.</span> <span class="toc-text">检查自己的emal是否正确</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置邮箱名和名字"><span class="toc-number">2.</span> <span class="toc-text">设置邮箱名和名字</span></a></li></ol>
+            
         
     </div>
     <style>
@@ -398,7 +391,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"github提交没有贡献解决方案　| Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"vscode通过插件修改编辑器的内容　| Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -435,15 +428,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/04/06/git最实用命令/" title="上一篇: git最实用命令总结">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/04/04/vscode调试vue项目/" title="下一篇: vscode调试vue项目">
+            <a href="/2019/08/06/递归查找/" title="下一篇: 递归查找">
                 <i class="fa fa-angle-right"></i>
             </a>
         
